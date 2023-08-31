@@ -1,0 +1,35 @@
+{
+  "name": "marketfeed-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "18.16.0",
+    "@types/react": "18.0.38",
+    "@types/react-dom": "18.0.11",
+    "axios": "^1.4.0",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.1",
+    "firebase-admin": "^11.7.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.43",
+    "next": "13.3.1",
+    "react": "18.2.0",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "18.2.0",
+    "react-modern-drawer": "^1.2.0",
+    "react-phone-number-input": "^3.2.22",
+    "react-toastify": "^9.1.2",
+    "styled-components": "^5.3.10",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "babel-plugin-styled-components": "^2.1.1"
+  }
+}
