@@ -51,8 +51,8 @@ const Faq = ({
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <Container>
-      <Title>FAQ</Title>
-      <Wrapper>
+      <Title data-aos='fade-up'>FAQ</Title>
+      <Wrapper data-aos='fade-right'>
         <FaqContainer id='mf_faq_container'>
           {faqDetails.map((item: any, index: any) => {
             return (
@@ -124,7 +124,7 @@ const Faq = ({
             </FaqAns>
           </FaqItem>
         </FaqContainer>
-        <SupportWrapper>
+        <SupportWrapper data-aos='fade-left'>
           <div>
             <SubTitle>
               Have more {deviceType === 'mobile' && <br />} questions?

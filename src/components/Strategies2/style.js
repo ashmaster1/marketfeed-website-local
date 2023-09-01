@@ -41,11 +41,11 @@ export const Title = styled.h1`
   font-size: 56px;
   font-style: normal;
   font-weight: 900;
-  line-height: 70px; /* 125% */
+  line-height: 70px;
   letter-spacing: -2.24px;
   @media (max-width: 1199px) {
     font-size: 32px;
-    line-height: 40px; /* 125% */
+    line-height: 40px;
     letter-spacing: -1.28px;
   }
   @media (max-width: 767px) {

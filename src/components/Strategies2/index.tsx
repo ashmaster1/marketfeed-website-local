@@ -22,12 +22,13 @@ const Strategies2 = ({
 }) => {
   return (
     <Container>
-      <Title>
+      <Title data-aos="fade-up">
       Our Featured Strategies
       </Title>
-      <SubTitle>Strategies are powered by SEBI Research Analysts</SubTitle>
+      <SubTitle data-aos="fade-up">Strategies are powered by SEBI Research Analysts</SubTitle>
       <SubContainer>
         <Strategy
+        data-aos="fade-right"
           type={'sm'}
           onMouseEnter={() =>
             dataPush('mf_strategies_hover_view', {
@@ -82,6 +83,7 @@ const Strategies2 = ({
           </Details> */}
         </Strategy>
         <Strategy
+        data-aos="fade-left"
           type={'pb'}
           onMouseEnter={() =>
             dataPush('mf_strategies_hover_view', {

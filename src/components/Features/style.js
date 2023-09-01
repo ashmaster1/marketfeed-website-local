@@ -24,7 +24,7 @@ font-family: Satoshi-Variable;
 font-size: 56px;
 font-style: normal;
 font-weight: 900;
-line-height: 70px; /* 125% */
+line-height: 70px;
 letter-spacing: -2.24px;
   @media (max-width: 1199px) {
     font-size: 32px;
@@ -111,6 +111,7 @@ export const FeaturesContainer = styled.div`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        gap: 8px;
         @media (max-width: 767px) {
             align-items: center;
         }
@@ -140,8 +141,7 @@ export const FeaturesContainer = styled.div`
             font-family: Satoshi-Variable;
             font-size: 20px;
             font-style: normal;
-            font-weight: 500;
-            line-height: normal;
+            font-weight: 400;
             letter-spacing: -0.016px;
             opacity: 0.5;
             @media (max-width: 1199px) {
@@ -170,7 +170,7 @@ export const Cta = styled.button`
   align-items: center;
   justify-content: center;
   height: 67px;
-  width: 294px;
+  width: 187px;
   cursor: pointer;
   background-color: ${props => props.theme.colours.CTA_PRIMARY};
   border-radius: 60px;

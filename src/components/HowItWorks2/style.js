@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { rem } from '../../utils/remConverter';
+import { rem } from "../../utils/remConverter";
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const Container = styled.div`
   background: linear-gradient(180deg, #121212 0%, #000000 100%);
   position: relative;
   &:before {
-    content: url('https://marketfeed-app.gumlet.io/marketfeed-website/bg-grid.png?width=1074&height=716');
+    content: url("https://marketfeed-app.gumlet.io/marketfeed-website/bg-grid.png?width=1074&height=716");
     position: absolute;
     transform: rotate(90deg);
     left: -572px;
@@ -20,7 +20,7 @@ export const Container = styled.div`
     opacity: 0.3;
   }
   &:after {
-    content: url('https://marketfeed-app.gumlet.io/marketfeed-website/bg-grid.png?width=1074&height=716');
+    content: url("https://marketfeed-app.gumlet.io/marketfeed-website/bg-grid.png?width=1074&height=716");
     position: absolute;
     right: -572px;
     bottom: -416px;
@@ -36,10 +36,10 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: ${props => props.theme.theme.fontFamily};
-  font-weight: ${props => props.theme.theme.fontWeights.BOLDER};
-  font-size: ${props => props.theme.theme.fontSizes.H1};
-  color: ${props => props.theme.colours.fontPrimary};
+  font-family: ${(props) => props.theme.theme.fontFamily};
+  font-weight: ${(props) => props.theme.theme.fontWeights.BOLDER};
+  font-size: ${(props) => props.theme.theme.fontSizes.H1};
+  color: ${(props) => props.theme.colours.fontPrimary};
   margin-bottom: 60px;
   line-height: 70px;
   letter-spacing: -0.04em;
@@ -82,7 +82,7 @@ export const WorkFlow = styled.div`
     align-items: center;
   }
 
-  .dotted{
+  .dotted {
     position: absolute;
     top: 60px;
     left: 200px;
@@ -121,14 +121,16 @@ export const Step = styled.div`
   text-align: center;
   align-items: center;
   flex: 1 0 25%;
+
+  
   @media (max-width: 767px) {
     flex: 1 0 45%;
     align-items: center;
   }
   .stepTitle {
-    font-family: ${props => props.theme.theme.fontFamily};
-    font-weight: ${props => props.theme.theme.fontWeights.BOLD};
-    font-size: ${props => props.theme.theme.fontSizes.XXXL};
+    font-family: ${(props) => props.theme.theme.fontFamily};
+    font-weight: ${(props) => props.theme.theme.fontWeights.BOLD};
+    font-size: ${(props) => props.theme.theme.fontSizes.XXXL};
     margin-bottom: 12px;
     @media (max-width: 1199px) {
       font-size: 20px;
@@ -138,16 +140,16 @@ export const Step = styled.div`
       letter-spacing: -0.016px;
     }
     @media (max-width: 767px) {
-      font-size: ${props => props.theme.theme.fontSizes.S};
+      font-size: ${(props) => props.theme.theme.fontSizes.S};
       text-align: center;
     }
   }
 
   .stepDesc {
-    font-family: ${props => props.theme.theme.fontFamily};
-    font-weight: ${props => props.theme.theme.fontWeights.MEDIUM};
-    font-size: ${props => props.theme.theme.fontSizes.S};
-    opacity: ${props => props.theme.opacity.MEDIUM};
+    font-family: ${(props) => props.theme.theme.fontFamily};
+    font-weight: ${(props) => props.theme.theme.fontWeights.MEDIUM};
+    font-size: ${(props) => props.theme.theme.fontSizes.S};
+    opacity: ${(props) => props.theme.opacity.MEDIUM};
     @media (max-width: 1199px) {
       font-size: 12px;
       font-style: normal;
@@ -156,7 +158,7 @@ export const Step = styled.div`
       letter-spacing: -0.01px;
     }
     @media (max-width: 767px) {
-      font-size: ${props => props.theme.theme.fontSizes.XS};
+      font-size: ${(props) => props.theme.theme.fontSizes.XS};
     }
   }
 `;
@@ -171,13 +173,14 @@ export const ImageContainer = styled.div`
     rgba(255, 255, 255, 0.3) 0%,
     rgba(255, 255, 255, 0.05) 38.77%
   );
+
   backdrop-filter: blur(3.5px);
   margin-bottom: 24px;
   align-items: center;
   justify-content: center;
   position: relative;
   &:before {
-    content: '';
+    content: "";
     background: linear-gradient(133deg, #383838 -58.67%, #292929 68.16%);
     position: absolute;
     width: calc(100% - 2px);
@@ -220,13 +223,13 @@ export const ImageContainer = styled.div`
       width: 30px;
       height: 30px;
       border-radius: 15px;
-      font-size: ${props => props.theme.theme.fontSizes.XXXS};
+      font-size: ${(props) => props.theme.theme.fontSizes.XXXS};
     }
     @media (max-width: 767px) {
       width: 22px;
       height: 22px;
       border-radius: 11px;
-      font-size: ${props => props.theme.theme.fontSizes.XXXS};
+      font-size: ${(props) => props.theme.theme.fontSizes.XXXS};
     }
     background-image: linear-gradient(
       304.07deg,
@@ -234,14 +237,14 @@ export const ImageContainer = styled.div`
       #4485f7 115.99%
     );
     span {
-      font-family: ${props => props.theme.theme.fontFamily};
-      font-weight: ${props => props.theme.theme.fontWeights.BOLD};
-      font-size: ${props => props.theme.theme.fontSizes.XL};
+      font-family: ${(props) => props.theme.theme.fontFamily};
+      font-weight: ${(props) => props.theme.theme.fontWeights.BOLD};
+      font-size: ${(props) => props.theme.theme.fontSizes.XL};
       @media (max-width: 767px) {
         font-size: 15px;
       }
       @media (max-width: 767px) {
-        font-size: ${props => props.theme.theme.fontSizes.XXXS};
+        font-size: ${(props) => props.theme.theme.fontSizes.XXXS};
       }
     }
   }
@@ -254,18 +257,18 @@ export const Cta = styled.button`
   align-items: center;
   justify-content: center;
   height: 67px;
-  width: 294px;
+  width: 187px;
   cursor: pointer;
-  background-color: ${props => props.theme.colours.CTA_PRIMARY};
+  background-color: ${(props) => props.theme.colours.CTA_PRIMARY};
   border-radius: 60px;
   color: inherit;
   border: none;
   outline: inherit;
   margin-top: 100px;
-  color: ${props => props.theme.colours.BLACK};
-  font-family: ${props => props.theme.theme.fontFamily};
-  font-weight: ${props => props.theme.theme.fontWeights.BOLD};
-  font-size: ${props => props.theme.theme.fontSizes.XL};
+  color: ${(props) => props.theme.colours.BLACK};
+  font-family: ${(props) => props.theme.theme.fontFamily};
+  font-weight: ${(props) => props.theme.theme.fontWeights.BOLD};
+  font-size: ${(props) => props.theme.theme.fontSizes.XL};
   @media (max-width: 1199px) {
     margin-bottom: 40px;
     border-radius: 36px;
@@ -286,8 +289,8 @@ export const Cta = styled.button`
   transition: all 0.5s ease;
   position: relative;
   &:before {
-    content: '';
-    content: '';
+    content: "";
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -304,8 +307,6 @@ export const Cta = styled.button`
     transition: all 0.4s ease-in-out;
   }
 
-
-
   .loader-9 {
     width: 24px;
     height: 24px;
@@ -315,7 +316,7 @@ export const Cta = styled.button`
     border: 2px solid #000;
     animation: rotation 1s linear infinite;
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       left: 4px;
       top: 4px;
@@ -342,5 +343,3 @@ export const Cta = styled.button`
     }
   }
 `;
-
-

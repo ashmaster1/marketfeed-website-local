@@ -90,6 +90,8 @@ export const LeftDescription = styled.div`
     margin-bottom: 16px;
     color: #fff;
     letter-spacing: -0.04em;
+    line-height: 86px;
+    margin-top: 60px;
     @media (max-width: 1199px) {
         font-size: 48px;
         line-height: 46px; /* 95.833% */

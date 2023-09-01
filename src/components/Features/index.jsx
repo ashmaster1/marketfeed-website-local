@@ -4,13 +4,13 @@ import Icons from '../Icons/index'
 const Features = (props) => {
   return (
     <Container>
-      <Title>
+      <Title data-aos="fade-up">
         Supercharge your portfolio <br></br>
         with Automated Trading.
       </Title>
-      <SubTitle>Invest in high return, high risk trading portfolios</SubTitle>
+      <SubTitle data-aos="fade-up">Invest in high return, high risk trading portfolios</SubTitle>
       <FeaturesContainer>
-        <div className="feature">
+        <div className="feature" data-aos="flip-down">
           <div className="feature-icon">
             <Icons name='brain' />
           </div>
@@ -22,7 +22,7 @@ const Features = (props) => {
             </span>
           </div>
         </div>
-        <div className="feature">
+        <div className="feature" data-aos="flip-down">
           <div className="feature-icon">
           <Icons name='flag' />
           </div>
@@ -34,7 +34,7 @@ const Features = (props) => {
             </span>
           </div>
         </div>
-        <div className="feature">
+        <div className="feature" data-aos="flip-down">
           <div className="feature-icon">
           <Icons name='chart' />
           </div>

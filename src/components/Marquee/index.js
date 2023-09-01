@@ -1,4 +1,5 @@
 import { MarqueeContainer, MarqueeChildren } from "./style";
+import { dataPush } from "@/utils/gtm";
 import Icons from '../Icons/index'
 const Child = () => {
   return (
@@ -18,9 +19,17 @@ const Child = () => {
     </MarqueeChildren>
   );
 };
-const Marquee = () => {
+const Marquee = (props) => {
   return (
-    <MarqueeContainer>
+    <MarqueeContainer id='mf_register_workshop_top'
+    onClick={() => {
+      props.setShowRegistration(true);
+      dataPush('mf_register_workshop_click', {
+        event_action: 'Button Click',
+        event_label: 'Join Workshop',
+        position: 'top_nav',
+      });
+    }}>
       <div className="marquee">
         {<Child/>}
         {<Child/>}

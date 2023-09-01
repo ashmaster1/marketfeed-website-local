@@ -26,12 +26,12 @@ const UpcomingEvents2 = ({
   let {formattedDate, startTime, endTime} = formatWorkshopDate(workshopEventMeta.eventDate)
 
   return (
-    <Container>
+    <Container data-aos='zoom-in'>
       <Information>
         <div className='title'>UPCOMING WORKSHOP</div>
         <TitleAuthor>
           <h2 className='workshop'>
-            Learn how you can make extra income with marketfeed
+            Join our interactive Q&A session to clear more doubts about Automated Trading
           </h2>
           <p className='desc'>
             Beginner friendly | Free registration | 30 minutes | Doubt clearing

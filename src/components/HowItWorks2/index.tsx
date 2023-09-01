@@ -13,7 +13,7 @@ const HowItWorks2 = ({
 }) => {
   return (
     <Container>
-      <Title>How to Get Started</Title>
+      <Title data-aos='fade-up'>How to Get Started</Title>
       <WorkFlow>
         {/* {
           deviceType === 'desktop' ? (<svg className='path' xmlns="http://www.w3.org/2000/svg" width="720" height="2" viewBox="0 0 720 2" fill="none">
@@ -42,7 +42,7 @@ const HowItWorks2 = ({
             Register
           </span>
           <span className='stepDesc'>
-          Register for Workshop to {deviceType==='mobile' && <br></br>} understanding our offering
+          Register for Workshop {deviceType === 'desktop' && <br></br>} to {deviceType==='mobile' && <br></br>} understanding our offering
           </span>
         </Step>
         <Step>
@@ -58,7 +58,7 @@ const HowItWorks2 = ({
             Connect
           </span>
           <span className='stepDesc'>
-          Attend workshop, and our {deviceType==='mobile' && <br></br>} team will guide you further.
+          Attend workshop, {deviceType === 'desktop' && <br></br>} and our {deviceType==='mobile' && <br></br>} team will guide you further.
           </span>
         </Step>
         <Step>

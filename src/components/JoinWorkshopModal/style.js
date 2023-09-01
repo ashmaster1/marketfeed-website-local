@@ -6,7 +6,7 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 101;
+  z-index: 200;
   bottom: 0;
   width: calc(100% - 320px);
   height: 695px;

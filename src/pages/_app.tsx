@@ -21,6 +21,8 @@ import { getUtmParams } from '../utils/getUtmParams';
 import { removeNullAndUndefined } from '@/utils/removeNullAndUndefined';
 import { formatWorkshopMeta } from '@/utils/formatWorkshopMeta';
 import Marquee from '@/components/Marquee'
+import AOS from "aos";
+import "aos/dist/aos.css";
 const JoinWorkshopModal = dynamic(
   () => import('@/components/JoinWorkshopModal')
 );
@@ -198,6 +200,16 @@ export default function App({ Component, pageProps }: AppProps) {
   const [deviceType, setDeviceType] = useState('desktop');
   const [workshopEventMeta, setWorkShopEventMeta] = useState({});
 
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-quad',
+      delay: 50,
+    });
+    AOS.refresh();
+  }, []);
+
   const submitRegistrationForm = ({ name, email, phone, snackBarRequired }) => {
     const utmParams = getUtmParams();
     const { language, date, duration } = formatWorkshopMeta(workshopEventMeta);
@@ -305,7 +317,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ></Script>
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
-        <Marquee />
+        <Marquee setShowRegistration={() => setShowRegistration(true)}/>
         <HeaderFullWidth
           type='HOME'
           deviceType={deviceType}

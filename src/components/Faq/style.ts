@@ -113,7 +113,7 @@ export const FaqAns = styled.div<FaqAnsProps>`
   letter-spacing: -0.014px;
   color: ${props => props.theme.colours.fontPrimary};
   opacity: ${props => (props.active ? props.theme.opacity.DARK : 0)};
-  padding-right: 30%;
+  padding-right: 5%;
   height: ${props => (props.active ? 'auto' : 0)};
   transform: translateY(0%);
   transition: all 1s ease-out;

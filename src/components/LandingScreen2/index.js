@@ -47,7 +47,7 @@ const LandingScreen2 = ({
     <>
       <Wrapper>
         <Container>
-          <LeftDescription>
+          <LeftDescription data-aos='fade-right'>
             {/* <div className='topText'>TRADING MADE SIMPLE</div> */}
             <div className='boldText'>
               Exclusive <br></br>high return <br></br>investments
@@ -59,7 +59,7 @@ const LandingScreen2 = ({
             <div className='tradeDescription'>once reserved for the wealthiest, <br></br>
 available to you now</div>
           </LeftDescription>
-          <RightForm ref={formRef}>
+          <RightForm ref={formRef} data-aos='fade-left'>
             <JoinWorkshopForm
               submitRegistrationForm={submitRegistrationForm}
               registrationCompleted={registrationCompleted}
@@ -70,7 +70,7 @@ available to you now</div>
             />
           </RightForm>
         </Container>
-        <TrustFactors deviceType={deviceType} />
+        <TrustFactors data-aos='zoom-in' deviceType={deviceType} />
       </Wrapper>
     </>
   );

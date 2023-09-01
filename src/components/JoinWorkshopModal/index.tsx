@@ -231,8 +231,7 @@ const JoinWorkshopModal = ({
         <FormContainer>
           {deviceType === 'mobile' && !registrationCompleted && (
             <Title>
-              Learn how you can{deviceType === 'desktop' && <br />} make extra
-              income{deviceType === 'desktop' && <br />} with marketfeed
+              Join our interactive {deviceType === 'desktop' && <br />} Q&A session to clear more doubts {deviceType === 'desktop' && <br />} about Automated Trading
               {/* Attend the workshop{' '}
             {deviceType === 'desktop' && <br />} to start trading
             {deviceType === 'desktop' && <br />} with */}
@@ -376,8 +375,7 @@ const JoinWorkshopModal = ({
         <FormDetailsWrapper>
           <SubHeading>Upcoming Workshop</SubHeading>
           <Title>
-            Learn how you can{deviceType === 'desktop' && <br />} make extra
-            income{deviceType === 'desktop' && <br />} with marketfeed
+          Join our interactive {deviceType === 'desktop' && <br />} Q&A session to {deviceType === 'desktop' && <br />} clear more doubts about Automated Trading
             {/* Attend the workshop{' '}
             {deviceType === 'desktop' && <br />} to start trading
             {deviceType === 'desktop' && <br />} with */}

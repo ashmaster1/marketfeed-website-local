@@ -4,11 +4,11 @@ import { Container, Item, ItemColumn, ItemRow, Title } from './style';
 const Testimonials = ({ deviceType }: { deviceType: String }) => {
   return (
     <Container>
-      <Title>
+      <Title data-aos='fade-up'>
         Hear from our {deviceType === 'mobile' && <br></br>} happy users
       </Title>
       <ItemRow>
-        <ItemColumn>
+        <ItemColumn data-aos='fade-right'>
           <Item type={'left'}>
             <span
               style={{
@@ -50,7 +50,7 @@ const Testimonials = ({ deviceType }: { deviceType: String }) => {
             </div>
           </Item>
         </ItemColumn>
-        <ItemColumn>
+        <ItemColumn data-aos='fade-left'>
           <Item type={'right'}>
             <div className='ratingReview'>
               <span>

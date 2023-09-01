@@ -9,6 +9,8 @@ export const MarqueeContainer = styled.a`
     position: fixed;
     top: 0;
     background: #3F3F3F;
+    cursor: pointer;
+    
     .marquee {
         flex: 0 0 auto;
         justify-content: space-between;
@@ -21,6 +23,7 @@ export const MarqueeContainer = styled.a`
         animation-play-state: running;
         animation-delay: 0;
         animation-direction: normal;
+
       
         @keyframes scroll {
             0% {
@@ -32,6 +35,9 @@ export const MarqueeContainer = styled.a`
           }
         
       }
+      &:hover > .marquee{
+        animation-play-state: paused;
+    }
 `
 
 export const MarqueeChildren = styled.div`
