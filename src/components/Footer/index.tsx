@@ -47,8 +47,7 @@ const Footer = (props: any) => {
             />
           </a>
           <p className="desc">
-            Fundfolio Fintech Pvt. Ltd.
-            <br /> Honeykomb by BHIVE, <br />
+            Honeykomb by BHIVE, <br />
             19th Main Road, <br />
             HSR Sector 3,
             <br />

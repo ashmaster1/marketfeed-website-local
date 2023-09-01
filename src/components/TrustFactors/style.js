@@ -9,8 +9,7 @@ export const Container = styled.div`
   height: 72px;
   justify-content: center;
   position: absolute;
-  bottom: 180px;
-  z-index:100;
+  bottom: 140px;
   @media (max-width: 1199px) {
     position: relative;
     bottom: auto;

@@ -15,7 +15,7 @@ const HowItWorks2 = ({
     <Container>
       <Title>How to Get Started</Title>
       <WorkFlow>
-        {
+        {/* {
           deviceType === 'desktop' ? (<svg className='path' xmlns="http://www.w3.org/2000/svg" width="720" height="2" viewBox="0 0 720 2" fill="none">
           <path d="M0 1H720" stroke="white" stroke-opacity="0.3" stroke-dasharray="8 8"/>
           </svg>) : (
@@ -23,7 +23,10 @@ const HowItWorks2 = ({
             <path d="M0 1L390 1.00003" stroke="white" stroke-opacity="0.3" stroke-dasharray="8 8"/>
             </svg>
           )
-        }
+        } */}
+        <div className='dotted'>
+
+        </div>
       
 
         <Step>

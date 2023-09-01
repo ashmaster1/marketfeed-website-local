@@ -114,9 +114,9 @@ export const FaqAns = styled.div<FaqAnsProps>`
   color: ${props => props.theme.colours.fontPrimary};
   opacity: ${props => (props.active ? props.theme.opacity.DARK : 0)};
   padding-right: 30%;
-  height: ${props => (props.active ? '100px' : 0)};
+  height: ${props => (props.active ? 'auto' : 0)};
   transform: translateY(0%);
-  transition: all 0.5s ease-out;
+  transition: all 1s ease-out;
   @media (max-width: 1199px) {
     font-size: 16px;
     font-style: normal;

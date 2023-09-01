@@ -17,10 +17,9 @@ export const Row = styled.div<RowTypes>`
   margin: auto;
   width: 100%;
   justify-content: space-between;
-  padding: 0 120px;
   max-width: 1100px;
   background: ${props => (props.type === 'footer' ? '#0F1120' : 'initial')};
-  padding: ${rem(125)} ${rem(150)};
+  padding: ${rem(125)} ${rem(40)};
   @media (max-width: 1199px) {
     padding: 40px 83px;
   }
@@ -34,7 +33,12 @@ export const LinkRow = styled.div`
   display: flex;
   flex-direction: row
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
+  @media (max-width: 767px) {
+    justify-content: flex-start;
+    gap: 20px;
+  }
 `
 export const SocialRow = styled.div`
   display: flex;

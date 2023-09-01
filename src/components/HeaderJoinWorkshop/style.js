@@ -4,7 +4,7 @@ import { rem } from '../../utils/remConverter';
 
 export const Container = styled.div`
   position: absolute;
-  bottom: 80px;
+  bottom: 160px;
   display: flex;
   align-items: center;
   width: 90%;

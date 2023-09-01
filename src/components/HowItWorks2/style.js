@@ -82,6 +82,22 @@ export const WorkFlow = styled.div`
     align-items: center;
   }
 
+  .dotted{
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    height: 2px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='6' stroke-linecap='butt'/%3e%3c/svg%3e");
+    width: 65%;
+    @media (max-width: 1199px) {
+      top: 45px;
+      left: 165px;
+    }
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
   .path {
     position: absolute;
     top: 60px;
@@ -232,34 +248,24 @@ export const ImageContainer = styled.div`
 `;
 
 export const Cta = styled.button`
-  background-color: inherit;
-  border: none;
-  outline: inherit;
+  position: relative;
+  flex: none;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 67px;
   width: 294px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 36px;
   cursor: pointer;
+  background-color: ${props => props.theme.colours.CTA_PRIMARY};
+  border-radius: 60px;
+  color: inherit;
+  border: none;
+  outline: inherit;
   margin-top: 100px;
-  span {
-    font-family: ${props => props.theme.theme.fontFamily};
-    font-weight: ${props => props.theme.theme.fontWeights.BOLD};
-    font-size: ${props => props.theme.theme.fontSizes.XL};
-    color: ${props => props.theme.colours.CTA_PRIMARY};
-    @media (max-width: 767px) {
-      font-size: 18px;
-    }
-  }
-  &:hover {
-    background: #ffc400;
-    color: #000;
-    span {
-      color: #000;
-    }
-  }
+  color: ${props => props.theme.colours.BLACK};
+  font-family: ${props => props.theme.theme.fontFamily};
+  font-weight: ${props => props.theme.theme.fontWeights.BOLD};
+  font-size: ${props => props.theme.theme.fontSizes.XL};
   @media (max-width: 1199px) {
     margin-bottom: 40px;
     border-radius: 36px;
@@ -276,4 +282,65 @@ export const Cta = styled.button`
     height: 54px;
     margin-top: 36px;
   }
+  overflow: hidden;
+  transition: all 0.5s ease;
+  position: relative;
+  &:before {
+    content: '';
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 67px;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-transition: none;
+    transition: none;
+  }
+  &:hover:before {
+    width: 120%;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+
+
+  .loader-9 {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 2px solid #000;
+    animation: rotation 1s linear infinite;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      border: 2px solid #000;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+    }
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
 `;
+
+

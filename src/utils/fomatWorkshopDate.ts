@@ -55,12 +55,11 @@ export default function formatWorkshopDate(workshopDate: any){
 
   // Format the start time
   let startTime = formatAMPM(date);
+  let endDate = new Date(date.getTime() + 30*60000);
 
   // Add 30 minutes to the date
-  date.setMinutes(date.getMinutes() + Number(workshopDate));
-
   // Format the end time
-  let endTime = formatAMPM(date);
+  let endTime = formatAMPM(endDate);
 
   // Format the date
   let formattedDate =
@@ -71,6 +70,7 @@ export default function formatWorkshopDate(workshopDate: any){
     getNth(date.getUTCDate()) +
     ', ' +
     date.getUTCFullYear();
+
 
   return {formattedDate, startTime, endTime}
 }

@@ -257,7 +257,7 @@ export const Container = styled.div`
   position: fixed;
   top: ${props => (props.showBanner ? '72px' : '0')};
   z-index: 11;
-  margin-top: 60px;
+  margin-top: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -269,14 +269,9 @@ export const Container = styled.div`
   &.scroll {
     background: #000000cc;
     // border: 2px solid rgba(72, 72, 72, 0.03);
-    height: ${rem(100)};
     transition: all 0.5s ease;
     -webkit-backdrop-filter: blur(24px);
     backdrop-filter: blur(24px);
-    @media (max-width: 767px) {
-      padding: 0 20px;
-      height: ${rem(61.2)};
-    }
   }
 
   .block {

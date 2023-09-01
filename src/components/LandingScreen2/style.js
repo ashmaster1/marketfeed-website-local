@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   height: 100vh;
   min-height: 948px;
   @media (max-width: 1199px) {
-    padding: 160px 40px 0 40px;
+    padding: 160px 10% 0 10%;
     height: auto;
     min-height: auto;
   }

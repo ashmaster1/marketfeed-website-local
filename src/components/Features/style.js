@@ -164,31 +164,26 @@ export const FeaturesContainer = styled.div`
 `
 
 export const Cta = styled.button`
-    background: #ffc400;
-    color: #000;
-  border: none;
-  outline: inherit;
+  position: relative;
+  flex: none;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 67px;
   width: 294px;
-  border-radius: 36px;
   cursor: pointer;
-  margin-top: 72px;
-  span {
-    font-family: ${props => props.theme.theme.fontFamily};
-    font-weight: ${props => props.theme.theme.fontWeights.BOLD};
-    font-size: ${props => props.theme.theme.fontSizes.XL};
-    color: color: #111;
-    @media (max-width: 767px) {
-      color: #111;
-      font-size: 16px;
-    }
-  }
+  background-color: ${props => props.theme.colours.CTA_PRIMARY};
+  border-radius: 60px;
+  color: inherit;
+  border: none;
+  outline: inherit;
+  margin-top: 100px;
+  color: ${props => props.theme.colours.BLACK};
+  font-family: ${props => props.theme.theme.fontFamily};
+  font-weight: ${props => props.theme.theme.fontWeights.BOLD};
+  font-size: ${props => props.theme.theme.fontSizes.XL};
   @media (max-width: 1199px) {
     margin-bottom: 40px;
-    background-color: #fec33b;
     border-radius: 36px;
     z-index: 1;
     width: 160px;
@@ -197,11 +192,69 @@ export const Cta = styled.button`
   }
   @media (max-width: 767px) {
     margin-bottom: 40px;
-    background-color: #fec33b;
     border-radius: 36px;
     z-index: 1;
     width: 150px;
     height: 54px;
     margin-top: 36px;
+  }
+  overflow: hidden;
+  transition: all 0.5s ease;
+  position: relative;
+  &:before {
+    content: '';
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 67px;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-transition: none;
+    transition: none;
+  }
+  &:hover:before {
+    width: 120%;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+
+
+  .loader-9 {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 2px solid #000;
+    animation: rotation 1s linear infinite;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      border: 2px solid #000;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+    }
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
   }
 `;

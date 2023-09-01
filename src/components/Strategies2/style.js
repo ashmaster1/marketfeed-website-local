@@ -66,6 +66,7 @@ export const SubTitle = styled.h1`
   line-height: normal;
   letter-spacing: -0.016px;
   margin-bottom: 60px;
+  opacity: 0.7;
   @media (max-width: 1199px) {
     font-size: 16px;
     line-height: normal;
@@ -235,28 +236,92 @@ export const Details = styled.div`
   }
 `;
 
-export const Cta = styled.a`
-  background-color: inherit;
+export const Cta = styled.button`
   position: relative;
-  border: none;
-  outline: inherit;
+  flex: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 67px;
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 16px;
+  height: 67px;
   cursor: pointer;
-  transition: all 0.5s ease;
-  span {
-    font-family: ${(props) => props.theme.theme.fontFamily};
-    font-weight: ${(props) => props.theme.theme.fontWeights.BOLD};
-    font-size: ${(props) => props.theme.theme.fontSizes.XL};
-    color: ${(props) => props.theme.colours.CTA_PRIMARY};
+  background-color: ${props => props.theme.colours.CTA_PRIMARY};
+  border-radius: 60px;
+  color: inherit;
+  border: none;
+  outline: inherit;
+  color: ${props => props.theme.colours.BLACK};
+  font-family: ${props => props.theme.theme.fontFamily};
+  font-weight: ${props => props.theme.theme.fontWeights.BOLD};
+  font-size: ${props => props.theme.theme.fontSizes.XL};
+  @media (max-width: 1199px) {
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    height: 52px;
   }
   @media (max-width: 767px) {
-    border-radius: 12px;
+    font-size: ${props => props.theme.theme.fontSizes.S};
+    letter-spacing: -0.016px;
+    height: 52px;
+  }
+  overflow: hidden;
+  transition: all 0.5s ease;
+  position: relative;
+  &:before {
+    content: '';
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 67px;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-transition: none;
+    transition: none;
+  }
+  &:hover:before {
+    width: 120%;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+
+
+  .loader-9 {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 2px solid #000;
+    animation: rotation 1s linear infinite;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      border: 2px solid #000;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+    }
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
   }
 `;
 
