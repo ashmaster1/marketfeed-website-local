@@ -3,6 +3,7 @@ import { dataPush } from '@/utils/gtm';
 import Products from '../Products';
 import { Container, Cta, ImageContainer, Step, Title, WorkFlow } from './style';
 import Icons from '../Icons';
+import { isMobileOnly } from 'react-device-detect';
 
 const HowItWorks2 = ({
   deviceType,
@@ -29,8 +30,8 @@ const HowItWorks2 = ({
         </div>
       
 
-        <Step>
-          <ImageContainer>
+        <Step data-aos={isMobileOnly ? 'flip-down' : null}>
+          <ImageContainer data-aos={isMobileOnly ? null : 'flip-down'}>
             <Icons
               name='step21'
               width={deviceType === 'mobile' ? 36 : 72}
@@ -45,8 +46,8 @@ const HowItWorks2 = ({
           Register for Workshop {deviceType === 'desktop' && <br></br>} to {deviceType==='mobile' && <br></br>} understanding our offering
           </span>
         </Step>
-        <Step>
-          <ImageContainer>
+        <Step data-aos={isMobileOnly ? 'flip-down' : null} >
+          <ImageContainer data-aos={isMobileOnly ? null : 'flip-down'} data-aos-delay={isMobileOnly ? null : '500'}>
             <Icons
               name='step22'
               width={deviceType === 'mobile' ? 36 : 72}
@@ -61,8 +62,8 @@ const HowItWorks2 = ({
           Attend workshop, {deviceType === 'desktop' && <br></br>} and our {deviceType==='mobile' && <br></br>} team will guide you further.
           </span>
         </Step>
-        <Step>
-          <ImageContainer>
+        <Step data-aos={isMobileOnly ? 'flip-down' : null} >
+          <ImageContainer data-aos={isMobileOnly ? null : 'flip-down'} data-aos-delay={isMobileOnly ? null : '1000'}>
             <Icons
               name='step23'
               width={deviceType === 'mobile' ? 36 : 72}

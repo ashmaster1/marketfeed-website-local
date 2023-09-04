@@ -1,5 +1,6 @@
 import { Container, SubTitle, Title, FeaturesContainer, Cta } from "./style";
 import Icons from '../Icons/index'
+import { deviceType, isMobile, isMobileOnly } from "react-device-detect";
 
 const Features = (props) => {
   return (
@@ -8,9 +9,9 @@ const Features = (props) => {
         Supercharge your portfolio <br></br>
         with Automated Trading.
       </Title>
-      <SubTitle data-aos="fade-up">Invest in high return, high risk trading portfolios</SubTitle>
+      <SubTitle data-aos="fade-up" data-aos-delay="300">Invest in high return, high risk trading portfolios</SubTitle>
       <FeaturesContainer>
-        <div className="feature" data-aos="flip-down">
+        <div className="feature" data-aos="flip-down" data-aos-delay={isMobileOnly ? '800' : null}>
           <div className="feature-icon">
             <Icons name='brain' />
           </div>
@@ -22,7 +23,7 @@ const Features = (props) => {
             </span>
           </div>
         </div>
-        <div className="feature" data-aos="flip-down">
+        <div className="feature" data-aos="flip-down" data-aos-delay={isMobileOnly ? '400' : null}>
           <div className="feature-icon">
           <Icons name='flag' />
           </div>
@@ -34,7 +35,7 @@ const Features = (props) => {
             </span>
           </div>
         </div>
-        <div className="feature" data-aos="flip-down">
+        <div className="feature" data-aos="flip-down" data-aos-delay={isMobileOnly ? '200' : null}>
           <div className="feature-icon">
           <Icons name='chart' />
           </div>

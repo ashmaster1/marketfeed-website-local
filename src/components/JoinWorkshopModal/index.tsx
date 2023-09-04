@@ -29,9 +29,9 @@ import {
   TimeVenue,
   Disclaimer,
 } from './style';
+import { isMobile } from 'react-device-detect';
 
 const JoinWorkshopModal = ({
-  deviceType,
   closeModal,
   registrationCompleted,
   submitRegistrationForm,
@@ -41,7 +41,6 @@ const JoinWorkshopModal = ({
   workshopEventMeta,
 }: {
   showRegistrationModal: Boolean;
-  deviceType: String;
   closeModal: Function;
   showRegistration: Boolean;
   registrationCompleted: Boolean;
@@ -56,6 +55,7 @@ const JoinWorkshopModal = ({
   const [isDisabled, setIsDisabled] = useState(false);
   const [showAnimation, setShowAnimation] = useState(false);
   const [registrationStatus, setRegistrationStatus] = useState(false);
+  let deviceType = isMobile ? 'mobile' : 'desktop'
 
   useEffect(() => {
     if (showRegistrationModal) {

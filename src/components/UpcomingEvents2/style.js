@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { rem } from '../../utils/remConverter';
 
 export const Container = styled.div`
+perspective: 2000px;
   display: flex;
   width: 100%;
   padding: 80px 0;
@@ -19,6 +20,8 @@ export const Container = styled.div`
 `;
 
 export const Information = styled.div`
+  perspective: 2000px;
+  transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
   padding: 40px 60px;
   width: 100%;
   max-width: 1000px;

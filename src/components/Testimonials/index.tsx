@@ -1,3 +1,4 @@
+import { isMobileOnly } from 'react-device-detect';
 import Icons from '../Icons';
 import { Container, Item, ItemColumn, ItemRow, Title } from './style';
 
@@ -8,7 +9,7 @@ const Testimonials = ({ deviceType }: { deviceType: String }) => {
         Hear from our {deviceType === 'mobile' && <br></br>} happy users
       </Title>
       <ItemRow>
-        <ItemColumn data-aos='fade-right'>
+        <ItemColumn data-aos={isMobileOnly ? 'fade-up' : 'fade-right'}>
           <Item type={'left'}>
             <span
               style={{
@@ -50,7 +51,7 @@ const Testimonials = ({ deviceType }: { deviceType: String }) => {
             </div>
           </Item>
         </ItemColumn>
-        <ItemColumn data-aos='fade-left'>
+        <ItemColumn data-aos={isMobileOnly ? 'fade-up' : 'fade-left'}>
           <Item type={'right'}>
             <div className='ratingReview'>
               <span>

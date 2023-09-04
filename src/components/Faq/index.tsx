@@ -18,6 +18,7 @@ import {
   Title,
   Wrapper,
 } from './style';
+import { isMobileOnly } from 'react-device-detect';
 
 const faqDetails: any = [
   {
@@ -52,7 +53,7 @@ const Faq = ({
   return (
     <Container>
       <Title data-aos='fade-up'>FAQ</Title>
-      <Wrapper data-aos='fade-right'>
+      <Wrapper data-aos={isMobileOnly ? 'fade-up' : 'fade-right'}>
         <FaqContainer id='mf_faq_container'>
           {faqDetails.map((item: any, index: any) => {
             return (
@@ -124,7 +125,7 @@ const Faq = ({
             </FaqAns>
           </FaqItem>
         </FaqContainer>
-        <SupportWrapper data-aos='fade-left'>
+        <SupportWrapper data-aos={isMobileOnly ? 'fade-up' : 'fade-left'}>
           <div>
             <SubTitle>
               Have more {deviceType === 'mobile' && <br />} questions?

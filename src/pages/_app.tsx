@@ -23,6 +23,7 @@ import { formatWorkshopMeta } from '@/utils/formatWorkshopMeta';
 import Marquee from '@/components/Marquee'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { isMobile } from 'react-device-detect';
 const JoinWorkshopModal = dynamic(
   () => import('@/components/JoinWorkshopModal')
 );
@@ -201,6 +202,15 @@ export default function App({ Component, pageProps }: AppProps) {
   const [workshopEventMeta, setWorkShopEventMeta] = useState({});
 
   useEffect(() => {
+    if(!isMobile){
+      setDeviceType('desktop')
+    }
+    else{
+      setDeviceType('mobile')
+    }
+  }, [])
+
+  useEffect(() => {
     AOS.init({
       offset: 200,
       duration: 600,
@@ -369,7 +379,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <JoinWorkshopModal
             showRegistrationModal={showRegistration}
-            deviceType={deviceType}
             closeModal={() => {
               setShowRegistration(false);
               setRegistrationCompleted(false);

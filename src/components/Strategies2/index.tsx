@@ -12,6 +12,7 @@ import {
   Title,
   Warning,
 } from './style';
+import { isMobileOnly } from 'react-device-detect';
 
 const Strategies2 = ({
   deviceType,
@@ -25,10 +26,11 @@ const Strategies2 = ({
       <Title data-aos="fade-up">
       Our Featured Strategies
       </Title>
-      <SubTitle data-aos="fade-up">Strategies are powered by SEBI Research Analysts</SubTitle>
+      <SubTitle data-aos="fade-up" data-aos-delay="300">Strategies are powered by SEBI Research Analysts</SubTitle>
       <SubContainer>
         <Strategy
-        data-aos="fade-right"
+        data-aos={isMobileOnly ? 'flip-down' : "fade-right"}
+        data-aos-delay={isMobileOnly ? '500' : '500'}
           type={'sm'}
           onMouseEnter={() =>
             dataPush('mf_strategies_hover_view', {
@@ -83,7 +85,8 @@ const Strategies2 = ({
           </Details> */}
         </Strategy>
         <Strategy
-        data-aos="fade-left"
+        data-aos={isMobileOnly ? 'flip-down' : "fade-left"}
+        data-aos-delay={isMobileOnly ? '200' : '500'}
           type={'pb'}
           onMouseEnter={() =>
             dataPush('mf_strategies_hover_view', {

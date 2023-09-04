@@ -25,10 +25,15 @@ export const Container = styled.div`
   transform: scale(${props => (props.show ? 1 : 0.9)});
   transition: all 0.1s ease;
   display: flex;
+  @media (max-width: 1199px) {
+    width: calc(55% - 40px);
+    padding: 0;
+    height: 630px;
+  }
   @media (max-width: 767px) {
     width: calc(100% - 40px);
     padding: 0;
-    height: 600px;
+    height: 630px;
   }
   &:before {
     content: '';
@@ -53,7 +58,7 @@ export const FormContainer = styled.div`
   background: #fff;
   z-index: 1;
   border-radius: 24px;
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     border-radius: 20px;
     padding: 28px 24px;
   }
@@ -72,7 +77,7 @@ export const InputItem = styled.div`
   width: 100%;
   margin-bottom: 24px;
   position: relative;
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     margin-bottom: 16px;
   }
   .label {
@@ -136,7 +141,7 @@ export const Cta = styled.button`
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     margin-top: 8px;
   }
   .loader-9 {
@@ -182,7 +187,7 @@ export const FormDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     display: none;
   }
 `;
@@ -208,7 +213,7 @@ export const Title = styled.div`
   span {
     color: #4485f7;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     color: #000;
     font-size: ${props => props.theme.theme.fontSizes.XXL};
     line-height: 1.2em;
@@ -222,7 +227,7 @@ export const TimeVenue = styled.div`
   gap: 80px;
   position: relative;
   margin-top: 40px;
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     flex-direction: column;
     gap: 16px;
     align-items: flex-start;
@@ -244,7 +249,7 @@ export const TimeVenue = styled.div`
     justify-content: center;
     background: rgba(255, 255, 255, 0.1);
 
-    @media (max-width: 767px) {
+    @media (max-width: 1199px) {
       width: 40px;
       height: 40px;
       border-radius: 20px;
@@ -259,7 +264,7 @@ export const TimeVenue = styled.div`
       font-family: ${props => props.theme.theme.fontFamily};
       font-weight: ${props => props.theme.theme.fontWeights.MEDIUM};
       font-size: ${props => props.theme.theme.fontSizes.XXL};
-      @media (max-width: 767px) {
+      @media (max-width: 1199px) {
         color: #000;
         font-size: ${props => props.theme.theme.fontSizes.S};
       }
@@ -270,7 +275,7 @@ export const TimeVenue = styled.div`
       font-weight: ${props => props.theme.theme.fontWeights.REGULAR};
       font-size: ${props => props.theme.theme.fontSizes.XL};
       opacity: ${props => props.theme.opacity.DARK};
-      @media (max-width: 767px) {
+      @media (max-width: 1199px) {
         font-size: ${props => props.theme.theme.fontSizes.XS};
         color: #000;
       }
@@ -296,7 +301,7 @@ export const Close = styled.div`
   right: 30px;
   cursor: pointer;
   z-index: 1;
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     top: 16px;
     right: 16px;
     display: flex;
@@ -330,7 +335,7 @@ export const PhoneInputContainer = styled.div`
     margin-left: 4px;
     padding: 16px 5px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1199px) {
       align-items: center;
       background-color: #fff;
       font-size: ${rem(14)};

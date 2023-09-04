@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import JoinWorkshopForm from '../JoinWorkshopForm';
 import TrustFactors from '../TrustFactors';
 import { Container, LeftDescription, RightForm, Wrapper } from './style';
+import { isMobile, isMobileOnly } from 'react-device-detect';
 
 const LandingScreen2 = ({
   deviceType,
@@ -47,19 +48,19 @@ const LandingScreen2 = ({
     <>
       <Wrapper>
         <Container>
-          <LeftDescription data-aos='fade-right'>
+          <LeftDescription data-aos={isMobileOnly ? 'fade-up' :'fade-right'}>
             {/* <div className='topText'>TRADING MADE SIMPLE</div> */}
-            <div className='boldText'>
+            <div className='boldText'  >
               Exclusive <br></br>high return <br></br>investments
             </div>
             {/* <div className='tradeDescription'>
               Strategies that you can execute{' '}
               {deviceType === 'mobile' && <br></br>} in a single click!
             </div> */}
-            <div className='tradeDescription'>once reserved for the wealthiest, <br></br>
+            <div className='tradeDescription' >once reserved for the wealthiest, <br></br>
 available to you now</div>
           </LeftDescription>
-          <RightForm ref={formRef} data-aos='fade-left'>
+          <RightForm ref={formRef} data-aos={isMobileOnly ? 'flip-down' :'fade-left'} data-aos-delay={isMobileOnly ? '800' : null}>
             <JoinWorkshopForm
               submitRegistrationForm={submitRegistrationForm}
               registrationCompleted={registrationCompleted}
