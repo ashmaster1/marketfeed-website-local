@@ -11,6 +11,14 @@ export const Container = styled.div`
   align-items: center;
   background: #121212;
 
+  @media (max-width: 1386px) {
+    padding: 80px 300px;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 80px 250px;
+  }
+
   @media (max-width: 1199px) {
     padding: 40px 24px;
   }
@@ -71,6 +79,7 @@ export const FeaturesContainer = styled.div`
   margin-top: 68px;
   @media (max-width: 767px) {
     margin-top: 36px;
+    margin-bottom: 10px;
     gap: 32px;
 }
   .feature{
@@ -173,7 +182,7 @@ export const Cta = styled.button`
   width: 187px;
   cursor: pointer;
   background-color: ${props => props.theme.colours.CTA_PRIMARY};
-  border-radius: 60px;
+  border-radius: 16px;
   color: inherit;
   border: none;
   outline: inherit;
@@ -184,19 +193,21 @@ export const Cta = styled.button`
   font-size: ${props => props.theme.theme.fontSizes.XL};
   @media (max-width: 1199px) {
     margin-bottom: 40px;
-    border-radius: 36px;
+    border-radius: 16px;
     z-index: 1;
     width: 160px;
     height: 60px;
     margin-top: 60px;
+    font-size: 18px;
   }
   @media (max-width: 767px) {
-    margin-bottom: 40px;
-    border-radius: 36px;
+    margin-bottom: 10px;
+    border-radius: 16px;
     z-index: 1;
     width: 150px;
     height: 54px;
     margin-top: 36px;
+    font-size: 16px;
   }
   overflow: hidden;
   transition: all 0.5s ease;

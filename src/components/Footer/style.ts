@@ -56,11 +56,14 @@ export const Column = styled.div<ColumnProps>`
   .desc {
     max-width: ${rem(264)};
     color: #fff;
-    font-size: ${rem(16)};
+    font-size: 16px;
     font-weight: 500;
     font-family: 'Satoshi-Regular';
     margin: ${rem(8)} 0;
     opacity: 0.8;
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
   }
   a {
     text-decoration: none;
@@ -91,25 +94,14 @@ export const SubHeading = styled.div`
   color: #56535f;
   opacity: 0.6;
   font-weight: ${props => props.theme.theme.fontWeights.BOLD};
-  font-size: ${rem(18)};
+  font-size: 20px;
   font-weight: bold;
   text-transform: capitalize;
-  margin-bottom: ${rem(5, 'large')};
-  @media (min-width: 768px) {
-    font-size: ${rem(20)};
+  margin-bottom: 16px;
+  margin-top: -2px;
+  @media (max-width: 768px) {
+    font-size: 14px;
     margin-bottom: ${rem(10, 'large')};
-  }
-  @media (min-width: 1920px) {
-    font-size: ${rem(24, 'large')};
-    margin-bottom: ${rem(16, 'large')};
-  }
-  @media (min-width: 2560px) {
-    font-size: ${rem(24, 'extraLarge')};
-    margin-bottom: ${rem(16, 'extraLarge')};
-  }
-  @media (min-width: 3840px) {
-    font-size: ${rem(24, 'xxl')};
-    margin-bottom: ${rem(16, 'xxl')};
   }
 `;
 export const FooterLink = styled.div`
@@ -117,7 +109,7 @@ export const FooterLink = styled.div`
   color: #fff;
   opacity: 0.8;
   font-family: 'Satoshi-Regular';
-  font-size: ${rem(16)};
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.3;
   cursor: ${props => props?.unclickable ? 'none' : 'pointer'}pointer;
@@ -127,21 +119,9 @@ export const FooterLink = styled.div`
     color: ${props => props?.unclickable ? '#fff' : '#4485f7'}pointer;
     color: #4485f7;
   }
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     margin-bottom: ${rem(8)};
-    font-size: ${rem(16)};
-  }
-  @media (min-width: 1920px) {
-    font-size: ${rem(14, 'large')};
-    margin-bottom: ${rem(12, 'large')};
-  }
-  @media (min-width: 2560px) {
-    font-size: ${rem(14, 'extraLarge')};
-    margin-bottom: ${rem(12, 'extraLarge')};
-  }
-  @media (min-width: 3840px) {
-    font-size: ${rem(14, 'xxl')};
-    margin-bottom: ${rem(12, 'xxl')};
+    font-size: 12px;
   }
 `;
 export const Copyright = styled.div`

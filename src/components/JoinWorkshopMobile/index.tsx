@@ -20,8 +20,7 @@ const JoinWorkshopMobile = ({
         <Container>
           <PopUpContainer>
             <Desc>
-              SEBI Registered RAs send recommendations <br />
-              to you. Accept it with just a single click!
+            Join our interactive clear more doubts about<br/> Automated Trading
             </Desc>
             <Cta onClick={() => setShowRegistration()}>
               Register for Workshop

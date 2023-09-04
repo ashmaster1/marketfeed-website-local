@@ -12,7 +12,7 @@ export const FormContainer = styled.div`
     #212121 26.03%,
     #313131 99.97%
   );
-  border-radius: 36px;
+  border-radius: 38px;
   position: relative;
 
   @media (max-width: 767px) {
@@ -237,7 +237,7 @@ export const Cta = styled.button`
   height: 67px;
   cursor: pointer;
   background-color: ${props => props.theme.colours.CTA_PRIMARY};
-  border-radius: 60px;
+  border-radius: 16px;
   color: inherit;
   border: none;
   outline: inherit;

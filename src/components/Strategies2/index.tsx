@@ -26,7 +26,7 @@ const Strategies2 = ({
       <Title data-aos="fade-up">
       Our Featured Strategies
       </Title>
-      <SubTitle data-aos="fade-up" data-aos-delay="300">Strategies are powered by SEBI Research Analysts</SubTitle>
+      <SubTitle style={{opacity: 0.7}} data-aos="fade-up" data-aos-delay="300">Strategies are powered by SEBI Research Analysts</SubTitle>
       <SubContainer>
         <Strategy
         data-aos={isMobileOnly ? 'flip-down' : "fade-right"}
@@ -141,7 +141,7 @@ const Strategies2 = ({
           </Details> */}
         </Strategy>
       </SubContainer>
-      <Warning>*Past performance is not a guarantee of future results</Warning>
+      <Warning data-aos='fade-up'>*Past performance is not a guarantee of future results</Warning>
     </Container>
   );
 };

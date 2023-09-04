@@ -19,6 +19,13 @@ export const Container = styled.div`
     top: 248px;
     opacity: 0.8;
   }
+  @media (max-width: 1386px) {
+    padding: 80px 300px;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 80px 250px;
+  }
   @media (max-width: 1199px) {
     padding: 52px 40px;
     background: transparent;
@@ -90,14 +97,13 @@ export const Item = styled.div`
   width: 100%;
   flex-direction: column;
   padding: ${props => (props.type === 'left' ? '90px 50px' : '50px')};
-  border-radius: 32px;
+  border-radius: 38px;
   background: linear-gradient(
     114.02deg,
     #626262 0%,
     #212121 26.03%,
     #313131 99.97%
   );
-  border-radius: 36px;
   position: relative;
   @media (max-width: 1199px) {
     border-radius: 20px;

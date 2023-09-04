@@ -25,6 +25,13 @@ export const Container = styled.div`
     right: -572px;
     bottom: -416px;
   }
+  @media (max-width: 1386px) {
+    padding: 80px 300px;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 80px 250px;
+  }
   @media (max-width: 1199px) {
     padding: 40px 24px;
     background: transparent;
@@ -77,7 +84,7 @@ export const WorkFlow = styled.div`
     width: 100%;
     padding: 24px;
     gap: 40px 24px;
-    margin-bottom: 36px;
+    margin-bottom: 10px;
     flex-direction: column;
     align-items: center;
   }
@@ -260,7 +267,7 @@ export const Cta = styled.button`
   width: 187px;
   cursor: pointer;
   background-color: ${(props) => props.theme.colours.CTA_PRIMARY};
-  border-radius: 60px;
+  border-radius: 16px;
   color: inherit;
   border: none;
   outline: inherit;
@@ -271,19 +278,21 @@ export const Cta = styled.button`
   font-size: ${(props) => props.theme.theme.fontSizes.XL};
   @media (max-width: 1199px) {
     margin-bottom: 40px;
-    border-radius: 36px;
+    border-radius: 16px;
     z-index: 1;
     width: 160px;
     height: 60px;
     margin-top: 60px;
+    font-size: 18px;
   }
   @media (max-width: 767px) {
-    margin-bottom: 40px;
-    border-radius: 36px;
+    margin-bottom: 10px;
+    border-radius: 16px;
     z-index: 1;
     width: 150px;
     height: 54px;
     margin-top: 36px;
+    font-size: 16px;
   }
   overflow: hidden;
   transition: all 0.5s ease;

@@ -27,7 +27,7 @@ export const Information = styled.div`
   max-width: 1000px;
   margin-auto;
   background-color: ${props => props.theme.colours.SURFACE};
-  border-radius: 32px;
+  border-radius: 38px;
   @media (max-width: 767px) {
     padding: ${rem(24)} ${rem(20)};
     border-radius: 20px;
@@ -58,7 +58,6 @@ export const Information = styled.div`
     #212121 26.03%,
     #313131 99.97%
   );
-  border-radius: 36px;
   position: relative;
   &:before {
     content: '';
@@ -304,7 +303,7 @@ export const Cta = styled.button`
   position: relative;
   background-color: ${props =>
     props.type === 'ghost' ? 'transparent' : props.theme.colours.CTA_PRIMARY};
-  border-radius: 36px;
+  border-radius: 16px;
   color: inherit;
   border: none;
   outline: inherit;

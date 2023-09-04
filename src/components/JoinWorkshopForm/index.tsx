@@ -284,7 +284,7 @@ const JoinWorkshopForm = ({
       <Wrapper>
         <li>
           <Icons name='tick' />
-          <span>Better returns than mutual funds and stocks</span>
+          <span>Potentially better returns than mutual funds and stocks</span>
         </li>
         <li>
           <Icons name='tick' />
@@ -293,7 +293,7 @@ const JoinWorkshopForm = ({
       </Wrapper>
       <Cta onClick={() => showRegistrationModal()}>
         <span style={{ marginRight: 10 }}>Get Started</span>{' '}
-        <Icons name='arrow'/>
+        <Icons name='arrow' color="#111"/>
       </Cta>
     </FormContainer>
   );

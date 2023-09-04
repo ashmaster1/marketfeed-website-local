@@ -14,6 +14,7 @@ import {
 } from './style';
 import formatWorkshopDate from '@/utils/fomatWorkshopDate';
 import { useEffect, useRef, useState } from 'react';
+import { isMobile } from 'react-device-detect';
 
 const UpcomingEvents2 = ({
   deviceType,
@@ -37,6 +38,9 @@ const UpcomingEvents2 = ({
   },[])
 
   function rotateElement(event){
+    if(isMobile){
+      return
+    }
     let card = document.getElementById('card');
     //let container = document.getElementById('cont');
     const mouseX = event.clientX;

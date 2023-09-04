@@ -378,7 +378,7 @@ export const Button = styled.div`
     transition: all 0.5s ease;
   }
   &:hover > svg path {
-    stroke: #000;
+    stroke: #111;
   }
   span {
     display: flex;
@@ -387,7 +387,7 @@ export const Button = styled.div`
     }
   }
   @media (min-width: 767px) and (max-width: 1199px) {
-    font-size: 10px;
+    font-size: 14px;
     margin-left: 20px;
   }
   &.desktop {

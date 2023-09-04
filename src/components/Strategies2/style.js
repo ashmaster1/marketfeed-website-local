@@ -11,6 +11,13 @@ export const Container = styled.div`
   text-align: center;
   background: linear-gradient(180deg, #000000 0%, #121212 100%);
   position: relative;
+  @media (max-width: 1386px) {
+    padding: 80px 300px;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 80px 250px;
+  }
   @media (max-width: 1199px) {
     padding: 40px 24px;
   }
@@ -85,14 +92,13 @@ export const Strategy = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 50px 40px;
-  border-radius: 32px;
+  border-radius: 38px;
   background: linear-gradient(
     114.02deg,
     #626262 0%,
     #212121 26.03%,
     #313131 99.97%
   );
-  border-radius: 36px;
   position: relative;
   &:before {
     content: "";

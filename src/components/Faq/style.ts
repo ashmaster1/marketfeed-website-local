@@ -215,7 +215,7 @@ export const Cta = styled.button`
   height: 67px;
   cursor: pointer;
   background-color: ${props => props.theme.colours.CTA_PRIMARY};
-  border-radius: 56px;
+  border-radius: 16px;
   color: inherit;
   border: none;
   outline: inherit;
@@ -275,7 +275,7 @@ export const CtaGhost = styled.a`
   height: 67px;
   cursor: pointer;
   background-color: transparent;
-  border-radius: 56px;
+  border-radius: 16px;
   color: inherit;
   border: none;
   outline: inherit;
