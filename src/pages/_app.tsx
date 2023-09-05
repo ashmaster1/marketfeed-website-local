@@ -24,6 +24,7 @@ import Marquee from '@/components/Marquee'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { isMobile } from 'react-device-detect';
+import HeaderGetApp from '@/components/HeaderGetApp';
 const JoinWorkshopModal = dynamic(
   () => import('@/components/JoinWorkshopModal')
 );
@@ -200,6 +201,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
   const [deviceType, setDeviceType] = useState('desktop');
   const [workshopEventMeta, setWorkShopEventMeta] = useState({});
+  const [isAppScanModalVisible, setIsAppScanModalVisible] = useState(false)
 
   useEffect(() => {
     if(!isMobile){
@@ -212,10 +214,10 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     AOS.init({
-      offset: 200,
       duration: 600,
-      easing: 'ease-in-quad',
-      delay: 50,
+      easing: 'ease-in-cubic',
+      delay: 500,
+      offset: 0
     });
     AOS.refresh();
   }, []);
@@ -335,7 +337,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           closeModal={() => setShowRegistration(false)}
           setShowRegistration={() => setShowRegistration(true)}
           // openConsultationModal={() => joinWorkshopModalVisible(true)}
-          // openAppScanModal={() => setIsAppScanModalVisible(true)}
+          openAppScanModal={() => {setIsAppScanModalVisible(true)}}
         />
         <>
           <Component
@@ -344,6 +346,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               showRegistration: showRegistration,
               query,
               registrationCompleted: registrationCompleted,
+              openAppScanModal: () => {setIsAppScanModalVisible(true)},
               setMobileRegistrationPopup: value => {
                 if (
                   value &&
@@ -408,6 +411,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               setShowRegistration(true);
             }}
           />
+          {isAppScanModalVisible && <HeaderGetApp openAppScanModal={() => {setIsAppScanModalVisible(false)}}/> }
         </>
         <ToastContainer />
       </ThemeProvider>

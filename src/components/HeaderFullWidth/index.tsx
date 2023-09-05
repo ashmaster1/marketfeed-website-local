@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { isMobileOnly } from 'react-device-detect';
+import { isMobileOnly, isTablet } from 'react-device-detect';
 
 // import { trackEvent } from "../../utils/events";
 import { dataPush } from '../../utils/gtm';
@@ -174,7 +174,7 @@ function HeaderFullWidth(props: any) {
       <div className='seperator' />
       <Link
         onClick={() => {
-          device === 'mobile' ? null : props.openAppScanModal();
+          !isMobileOnly && props.openAppScanModal();
           dataPush('mf_menu_click', {
             event_action: 'Click Link',
             event_label: 'Marketfeed App',
@@ -182,7 +182,7 @@ function HeaderFullWidth(props: any) {
         }}
         id='mf_menu_get_marketfeed_app'
         href={
-          device === 'mobile'
+          isMobileOnly
             ? 'https://get.marketfeed.app/8GbT/cb8a5790'
             : 'javascript:void(0);'
         }
@@ -250,6 +250,7 @@ function HeaderFullWidth(props: any) {
                 </a>
                 <a
                   onClick={() => {
+                    props.openAppScanModal()
                     dataPush('mf_menu_click', {
                       event_action: 'Click Link',
                       event_label: 'Marketfeed App',
@@ -259,7 +260,7 @@ function HeaderFullWidth(props: any) {
                   href={
                     device === 'mobile'
                       ? 'https://get.marketfeed.app/8GbT/cb8a5790'
-                      : '#get-app'
+                      : 'javascript:void(0);'
                   }
                 >
                   <span>Get marketfeed App</span>
@@ -292,8 +293,8 @@ function HeaderFullWidth(props: any) {
                     });
                   }}
                 >
-                  <span style={{ marginRight: 10 }}>Get Started</span>{' '}
-                  <Icons name='arrow' color={'#ffc400'} />
+                  <span style={{ marginRight: isTablet ? 2 : 10 }}>Get Started</span>{' '}
+                  <Icons name='arrow' color={'#ffc400'} style={{width: isTablet ? '16px' : '24px'}} />
                 </Button>
               </NavBar>
             </Row>

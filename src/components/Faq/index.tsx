@@ -27,7 +27,7 @@ const faqDetails: any = [
   },
   {
     question: 'What is the minimum capital to start trading?',
-    ans: 'A minimum capital of Rs 2.4 lakh is all you need to begin trading on marketfeed, with no upper limits. This amount grants you access to our expert trading strategies, aimed at maximizing your investment potential.',
+    ans: 'A minimum capital of ₹2.4 lakh is all you need to begin trading on marketfeed, with no upper limits. This amount grants you access to our expert trading strategies, aimed at maximizing your investment potential.',
   },
   {
     question: 'Are the returns guaranteed? Is there any risk to my capital?',
@@ -53,7 +53,7 @@ const Faq = ({
   return (
     <Container>
       <Title data-aos='fade-up'>FAQ</Title>
-      <Wrapper data-aos={isMobileOnly ? 'fade-up' : 'fade-right'}>
+      <Wrapper data-aos={'fade-up'}>
         <FaqContainer id='mf_faq_container'>
           {faqDetails.map((item: any, index: any) => {
             return (
@@ -86,46 +86,9 @@ const Faq = ({
               </FaqItem>
             );
           })}
-          <FaqItem id='mf_faq_item'>
-            <FaqQuestion
-              id='mf_faq_question'
-              active={activeIndex === 5}
-              onClick={() => {
-                dataPush('mf_faq_click', {
-                  event_action: 'Button Click',
-                  faq_text: 'What is the minimum capital required?',
-                });
-                5 === activeIndex ? setActiveIndex(-1) : setActiveIndex(5);
-              }}
-            >
-              What is the minimum capital required?
-              <Icons
-                id='mf_faq_icon'
-                name={activeIndex === 5 ? 'minus' : 'plus'}
-              />
-            </FaqQuestion>
-            <FaqAns
-              className={activeIndex === 5 ? 'active' : ''}
-              active={activeIndex === 5}
-            >
-              Each strategy has a minimum capital based on risk allocation,
-              trading style, and possible drawdowns. The minimum capital for
-              following Smart Money trades is{' '}
-              {communityPerformanceMetaList &&
-                communityPerformanceMetaList[0].minimumCapital.toLocaleString(
-                  'en-IN',
-                  {
-                    maximumFractionDigits: 0,
-                    minimumFractionDigits: 0,
-                    style: 'currency',
-                    currency: 'INR',
-                  }
-                )}
-              .
-            </FaqAns>
-          </FaqItem>
+          
         </FaqContainer>
-        <SupportWrapper data-aos={isMobileOnly ? 'fade-up' : 'fade-left'}>
+        <SupportWrapper data-aos='fade-up'>
           <div>
             <SubTitle>
               Have more {deviceType === 'mobile' && <br />} questions?
@@ -143,7 +106,7 @@ const Faq = ({
               id='mf_cta_chat_support'
               onClick={() => {
                 window.open(
-                  ' https://wa.me/919847181078?text=Hi%2C%0AI%20need%20help%20with%20marketfeed%20trading%20strategies'
+                  ' https://wa.me/919847181078?text=Hi, I need help with automating my trades.'
                 );
                 dataPush('mf_cta_click', {
                   event_action: 'Button Click',
@@ -175,7 +138,7 @@ const Faq = ({
                   position: 'left_faq',
                 })
               }
-              href={`mailto:support@marketfeed.com?subject=marketfeed.com trader support&body=Hi,%20I%20need%20help%20with%20marketfeed%20trading%20strategies.`}
+              href={`mailto:support@marketfeed.com?subject=marketfeed.com support&body=Hi, I need help with automating my trades.`}
             >
               <svg
                 width='25'
@@ -189,7 +152,7 @@ const Faq = ({
               Write to us
             </CtaGhost>
             <SupportTime>
-              We are available Mon-Sat between{' '}
+              We are available Mon-Fri between{' '}
               {deviceType === 'desktop' && <br />} 10 AM to 6 PM
             </SupportTime>
           </div>

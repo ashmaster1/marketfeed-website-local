@@ -12,7 +12,7 @@ import {
   Title,
   Warning,
 } from './style';
-import { isMobileOnly } from 'react-device-detect';
+import { isMobile, isMobileOnly } from 'react-device-detect';
 
 const Strategies2 = ({
   deviceType,
@@ -26,11 +26,11 @@ const Strategies2 = ({
       <Title data-aos="fade-up">
       Our Featured Strategies
       </Title>
-      <SubTitle style={{opacity: 0.7}} data-aos="fade-up" data-aos-delay="300">Strategies are powered by SEBI Research Analysts</SubTitle>
+      <SubTitle data-aos="fade-up" data-aos-delay="500">Strategies are powered by SEBI Research Analysts</SubTitle>
       <SubContainer>
         <Strategy
-        data-aos={isMobileOnly ? 'flip-down' : "fade-right"}
-        data-aos-delay={isMobileOnly ? '500' : '500'}
+        data-aos={isMobile ? 'flip-down' : "fade-right"}
+        data-aos-delay={isMobile ? '500' : '500'}
           type={'sm'}
           onMouseEnter={() =>
             dataPush('mf_strategies_hover_view', {
@@ -47,13 +47,13 @@ const Strategies2 = ({
             <span className='returns'>
               <span style={{ marginRight: '10px' }}>
                 {communityPerformanceMetaList &&
-                  communityPerformanceMetaList[0].last30DaysPnlPercentage}
+                  communityPerformanceMetaList[0].totalPnlPercentage}
                 %
               </span>
               <Icons
                 name={
                   Math.sign(
-                    communityPerformanceMetaList[0].last30DaysPnlPercentage
+                    communityPerformanceMetaList[0].totalPnlPercentage
                   ) > 0
                     ? 'trendup'
                     : 'trenddown'
@@ -85,8 +85,8 @@ const Strategies2 = ({
           </Details> */}
         </Strategy>
         <Strategy
-        data-aos={isMobileOnly ? 'flip-down' : "fade-left"}
-        data-aos-delay={isMobileOnly ? '200' : '500'}
+        data-aos={isMobile ? 'flip-down' : "fade-left"}
+        data-aos-delay={isMobile ? '200' : '500'}
           type={'pb'}
           onMouseEnter={() =>
             dataPush('mf_strategies_hover_view', {
@@ -103,13 +103,13 @@ const Strategies2 = ({
             <span className='returns'>
               <span style={{ marginRight: '10px' }}>
                 {communityPerformanceMetaList &&
-                  communityPerformanceMetaList[1].last30DaysPnlPercentage}
+                  communityPerformanceMetaList[1].totalPnlPercentage}
                 %
               </span>
               <Icons
                 name={
                   Math.sign(
-                    communityPerformanceMetaList[1]?.last30DaysPnlPercentage
+                    communityPerformanceMetaList[1]?.totalPnlPercentage
                   ) > 0
                     ? 'trendup'
                     : 'trenddown'

@@ -157,35 +157,7 @@ const Footer = (props: any) => {
             href="/read"
             rel="noopener noreferrer"
           >
-            <FooterLink>Blog</FooterLink>
-          </Link>
-          <Link
-            id="mf_quick_link"
-            onClick={() => {
-              dataPush("mf_quick_link_click", {
-                event_action: "Click Link",
-                event_label: "Market Updates",
-                position: "bottom_nav",
-              });
-            }}
-            href="/read"
-            rel="noopener noreferrer"
-          >
             <FooterLink>Market Updates</FooterLink>
-          </Link>
-          <Link
-            id="mf_quick_link"
-            onClick={() => {
-              dataPush("mf_quick_link_click", {
-                event_action: "Click Link",
-                event_label: "Market Updates",
-                position: "bottom_nav",
-              });
-            }}
-            href="/read"
-            rel="noopener noreferrer"
-          >
-            <FooterLink>Fyers Remapping</FooterLink>
           </Link>
           <Link
             id="mf_quick_link"
@@ -202,9 +174,9 @@ const Footer = (props: any) => {
             <FooterLink>Careers</FooterLink>
           </Link>
           <div id="mf_quick_link" rel="noopener noreferrer">
-            <FooterLink unclickable={true}>Download App</FooterLink>
+            <FooterLink unclickable={isMobile && true} onClick={() => !isMobile && props.openAppScanModal()}>Download App</FooterLink>
           </div>
-          <div
+          {isMobile && <div
             style={{
               display: "flex",
               flexDirection: "row",
@@ -243,7 +215,7 @@ const Footer = (props: any) => {
             >
               <Icons name="appstore" height={"22px"} width={"22px"} />
             </Link>
-          </div>
+          </div>}
 
           {/* <Link
             id='mf_quick_link'

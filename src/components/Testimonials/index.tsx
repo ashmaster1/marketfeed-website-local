@@ -6,7 +6,7 @@ const Testimonials = ({ deviceType }: { deviceType: String }) => {
   return (
     <Container>
       <Title data-aos='fade-up'>
-        Hear from our {deviceType === 'mobile' && <br></br>} happy users
+        Hear from our {isMobileOnly && <br></br>} happy users
       </Title>
       <ItemRow>
         <ItemColumn data-aos={isMobileOnly ? 'fade-up' : 'fade-right'}>

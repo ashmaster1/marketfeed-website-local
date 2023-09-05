@@ -6,9 +6,9 @@ import {
   Left,
 } from './style';
 
-const HeaderGetApp = () => {
+const HeaderGetApp = (props) => {
   return (
-    <Container>
+    <Container onClick={() => props.openAppScanModal(false)}>
       <Card>
         <Left>
           <h2 className='title'>Get marketfeed App</h2>

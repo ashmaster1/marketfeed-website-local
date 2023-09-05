@@ -166,24 +166,23 @@ export const PhoneInputContainer = styled.div`
   }
 `;
 
-export const Wrapper = styled.ul`
+export const Wrapper = styled.div`
   position: relative;
   margin-bottom: 42px;
   @media (max-width: 1199px) {
     margin-bottom: 24px;
   }
-  li {
+  .child {
     display: flex;
-    // justify-content: space-between;
     list-style: none;
     margin-bottom: 12px;
     align-items: center;
+    gap: 12px;
     span {
       color: #fff;
       font-family: ${props => props.theme.theme.fontFamily};
       font-size: ${props => props.theme.theme.fontSizes.S};
       font-weight: ${props => props.theme.theme.fontWeights.MEDIUM};
-      margin-left: 12px;
       opacity: 0.7;
       @media (max-width: 767px) {
         font-size: ${props => props.theme.theme.fontSizes.XS};

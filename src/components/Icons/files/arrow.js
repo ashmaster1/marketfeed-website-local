@@ -1,9 +1,10 @@
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 
 export const arrow = props => {
   return (
     <svg
-      width='24'
+      width={isMobile ? '16px' : '24px'}
       height='25'
       viewBox='0 0 24 25'
       fill='none'

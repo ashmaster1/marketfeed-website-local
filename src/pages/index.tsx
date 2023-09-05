@@ -76,6 +76,7 @@ export default function Home({
   showRegistrationMobile,
   workshopEventMeta,
   setWorkShopEventMeta,
+  openAppScanModal
 }: {
   communityPerformanceMetaList: CommunityPerformanceMeta[];
   passDeviceType: Function;
@@ -91,6 +92,7 @@ export default function Home({
   showRegistrationMobile: Boolean;
   setWorkShopEventMeta: Function;
   workshopEventMeta: Object;
+  openAppScanModal: Function
 }) {
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
@@ -103,6 +105,7 @@ export default function Home({
   useEffect(() => {
     passDeviceType(deviceType);
   }, []);
+  console.log(communityPerformanceMetaList)
   return (
     <>
       {isLoading ? <Loader /> : null}
@@ -132,7 +135,7 @@ export default function Home({
           }
           showRegistrationMobile={showRegistrationMobile}
         />
-        <Features />
+        <Features deviceType={deviceType} showRegistrationModal={() => setShowRegistration(true)}/>
         <Strategies2
           deviceType={deviceType}
           showRegistrationModal={() => setShowRegistration(true)}
@@ -150,7 +153,7 @@ export default function Home({
           deviceType={deviceType}
           communityPerformanceMetaList={communityPerformanceMetaList}
         />
-        <Footer />
+        <Footer openAppScanModal={openAppScanModal}/>
 
         <ToastContainer />
       </>

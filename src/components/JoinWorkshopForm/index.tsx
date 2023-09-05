@@ -23,6 +23,7 @@ import {
   TimeVenue,
   Aum,
 } from './style';
+import { isMobile, isTablet } from 'react-device-detect';
 
 const JoinWorkshopForm = ({
   submitRegistrationForm,
@@ -282,17 +283,22 @@ const JoinWorkshopForm = ({
         </div>
       </Aum>
       <Wrapper>
-        <li>
+        <div className='child'>
+          <div>
           <Icons name='tick' />
+          </div>
+          
           <span>Potentially better returns than mutual funds and stocks</span>
-        </li>
-        <li>
+        </div>
+        <div className='child'>
+        <div>
           <Icons name='tick' />
+          </div>
           <span>Start with just ₹2.4 Lakhs, no upper limit</span>
-        </li>
+        </div>
       </Wrapper>
       <Cta onClick={() => showRegistrationModal()}>
-        <span style={{ marginRight: 10 }}>Get Started</span>{' '}
+        <span style={{ marginRight: isMobile ? 2 : 10 }}>Get Started</span>{' '}
         <Icons name='arrow' color="#111"/>
       </Cta>
     </FormContainer>

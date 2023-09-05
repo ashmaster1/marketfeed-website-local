@@ -98,7 +98,24 @@ export const WorkFlow = styled.div`
     width: 65%;
     @media (max-width: 1199px) {
       top: 45px;
-      left: 165px;
+      left: 120px;
+      width: 70%
+    }
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .line {
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    height: 2px;
+    background-color: #333333;
+    width: 0;
+    @media (max-width: 1199px) {
+      top: 45px;
+      left: 120px;
     }
     @media (max-width: 767px) {
       display: none;
@@ -226,6 +243,7 @@ export const ImageContainer = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 20px;
+    transition: opacity 0.5s ease-in;
     @media (max-width: 1199px) {
       width: 30px;
       height: 30px;

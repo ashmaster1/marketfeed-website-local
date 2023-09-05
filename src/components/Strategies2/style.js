@@ -50,6 +50,7 @@ export const Title = styled.h1`
   font-weight: 900;
   line-height: 70px;
   letter-spacing: -2.24px;
+  margin-bottom: 12px;
   @media (max-width: 1199px) {
     font-size: 32px;
     line-height: 40px;
@@ -63,7 +64,7 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h1`
-  color: #fff;
+  color: #B8B8B8;
   text-align: center;
   font-feature-settings: "liga" off;
   font-family: Satoshi-Variable;
@@ -73,7 +74,6 @@ export const SubTitle = styled.h1`
   line-height: normal;
   letter-spacing: -0.016px;
   margin-bottom: 60px;
-  opacity: 0.7;
   @media (max-width: 1199px) {
     font-size: 16px;
     line-height: normal;

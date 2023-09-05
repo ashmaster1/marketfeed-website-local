@@ -26,9 +26,10 @@ export const Container = styled.div`
   transition: all 0.1s ease;
   display: flex;
   @media (max-width: 1199px) {
-    width: calc(55% - 40px);
+    width: 50%;
     padding: 0;
     height: 630px;
+    max-width: 500px;
   }
   @media (max-width: 767px) {
     width: calc(100% - 40px);
@@ -61,6 +62,7 @@ export const FormContainer = styled.div`
   @media (max-width: 1199px) {
     border-radius: 20px;
     padding: 28px 24px;
+    max-width: 500px
   }
 `;
 

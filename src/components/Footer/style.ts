@@ -112,11 +112,11 @@ export const FooterLink = styled.div`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.3;
-  cursor: ${props => props?.unclickable ? 'none' : 'pointer'}pointer;
+  cursor: ${props => props?.unclickable ? 'auto' : 'pointer'};
   margin-bottom: ${rem(8)};
   trasnsition: all 0.5s ease;
   &:hover {
-    color: ${props => props?.unclickable ? '#fff' : '#4485f7'}pointer;
+    color: ${props => props?.unclickable ? '#fff' : '#4485f7'};
     color: #4485f7;
   }
   @media (max-width: 767px) {

@@ -366,7 +366,7 @@ export const Button = styled.div`
   padding: 0 ${rem(28)};
   height: ${rem(56)};
   border-radius: 16px;
-  font-size: ${rem(16)};
+  font-size: 16px;
   color: #ffc400;
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s ease;
@@ -406,7 +406,7 @@ export const Button = styled.div`
   }
 
   @media (min-width: 1440px) {
-    font-size: ${rem(18)};
+    font-size: 18px;
   }
 `;
 

@@ -1,17 +1,18 @@
 import { Container, SubTitle, Title, FeaturesContainer, Cta } from "./style";
 import Icons from '../Icons/index'
-import { deviceType, isMobile, isMobileOnly } from "react-device-detect";
+import { deviceType, isDesktop, isMobile, isMobileOnly, isTablet } from "react-device-detect";
+import { dataPush } from "@/utils/gtm";
 
 const Features = (props) => {
   return (
     <Container>
       <Title data-aos="fade-up">
-        Supercharge your portfolio <br></br>
-        with Automated Trading.
+        Supercharge your {isMobileOnly && <br/>} portfolio {(!isMobileOnly) && <br/>}
+        with {isMobileOnly && <br/>} Automated Trading.
       </Title>
-      <SubTitle style={{opacity: 0.7}} data-aos="fade-up" data-aos-delay="300">Invest in high return, high risk trading portfolios</SubTitle>
+      <SubTitle data-aos="fade-up" data-aos-delay="500">Invest in high return, high risk trading portfolios</SubTitle>
       <FeaturesContainer>
-        <div className="feature" data-aos="flip-down" data-aos-delay={isMobileOnly ? '800' : null}>
+        <div className="feature" data-aos="flip-down">
           <div className="feature-icon">
             <Icons name='brain' />
           </div>
@@ -23,7 +24,7 @@ const Features = (props) => {
             </span>
           </div>
         </div>
-        <div className="feature" data-aos="flip-down" data-aos-delay={isMobileOnly ? '400' : null}>
+        <div className="feature" data-aos="flip-down" >
           <div className="feature-icon">
           <Icons name='flag' />
           </div>
@@ -35,7 +36,7 @@ const Features = (props) => {
             </span>
           </div>
         </div>
-        <div className="feature" data-aos="flip-down" data-aos-delay={isMobileOnly ? '200' : null}>
+        <div className="feature" data-aos="flip-down" >
           <div className="feature-icon">
           <Icons name='chart' />
           </div>
@@ -50,7 +51,15 @@ const Features = (props) => {
           </div>
         </div>
       </FeaturesContainer>
-      <Cta>
+      <Cta id='mf_register_workshop_center'
+        onClick={() => {
+          dataPush('mf_register_workshop_click', {
+            event_action: 'Button Click',
+            event_label: 'Join Workshop',
+            position: 'center',
+          });
+          props.showRegistrationModal();
+        }}> 
         <span>Get Started</span>
     </Cta>
     </Container>

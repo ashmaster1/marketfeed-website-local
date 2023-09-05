@@ -33,6 +33,7 @@ font-size: 56px;
 font-style: normal;
 font-weight: 900;
 line-height: 70px;
+margin-bottom: 12px;
 letter-spacing: -2.24px;
   @media (max-width: 1199px) {
     font-size: 32px;
@@ -48,7 +49,7 @@ letter-spacing: -2.24px;
 `;
 
 export const SubTitle = styled.h2`
-    color: #FFF;
+    color: #b8b8b8;
     text-align: center;
     font-feature-settings: 'liga' off;
     font-family: Satoshi-Variable;
@@ -57,7 +58,7 @@ export const SubTitle = styled.h2`
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.016px;
-    opacity: 0.7;
+    
     @media (max-width: 1199px) {
         font-size: 16px;
         line-height: normal;

@@ -3,9 +3,21 @@ import styled from 'styled-components';
 import { rem } from '../../utils/remConverter';
 
 export const Container = styled.div`
+position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 36px;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  margin: auto;
+  padding: 60px;
   display: flex;
   align-items: center;
-  width: 100%;
   @media (max-width: 767px) {
     padding: ${rem(24)} 0 ${rem(20)} 0;
   }
@@ -22,9 +34,10 @@ export const Card = styled.div`
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(
-    143.12deg,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0.2) 38.77%
+    114.02deg,
+    #626262 0%,
+    #212121 26.03%,
+    #313131 99.97%
   );
   border-radius: 20px;
   position: relative;
