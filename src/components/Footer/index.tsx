@@ -168,7 +168,7 @@ const Footer = (props: any) => {
                 position: "bottom_nav",
               });
             }}
-            href="/read"
+            href="https://www.linkedin.com/company/marketfeedapp/jobs/"
             rel="noopener noreferrer"
           >
             <FooterLink>Careers</FooterLink>
