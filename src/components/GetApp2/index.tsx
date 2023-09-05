@@ -1,9 +1,9 @@
 import { dataPush } from '@/utils/gtm';
+import { Card, Container, Left, Right, Close} from './style';
+import Icons from '../Icons/index'
+import { deviceType, isMobile } from 'react-device-detect';
 
-import { Card, Container, Left, Right } from './style';
-import { deviceType } from 'react-device-detect';
-
-const GetApp = () => {
+const GetApp2 = (props) => {
   return (
     <Container id={'get-app'}>
       <Card>
@@ -55,13 +55,13 @@ const GetApp = () => {
       <Close onClick={() => props.openAppScanModal()}>
           <Icons
             name='close'
-            width={deviceType === 'mobile' ? '20' : '36'}
-            height={deviceType === 'mobile' ? '20' : '36'}
-            fill={deviceType === 'mobile' ? '#000' : 'white'}
+            width={isMobile ? '20' : '36'}
+            height={isMobile ? '20' : '36'}
+            fill={'white'}
           />
       </Close>
     </Container>
   );
 };
 
-export default GetApp;
+export default GetApp2;

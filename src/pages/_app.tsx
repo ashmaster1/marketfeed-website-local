@@ -217,7 +217,7 @@ export default function App({ Component, pageProps }: AppProps) {
       duration: 600,
       easing: 'ease-in-cubic',
       delay: 500,
-      offset: 0
+      offset: 0,
     });
     AOS.refresh();
   }, []);

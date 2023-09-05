@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { rem } from '../../utils/remConverter';
 
 export const Container = styled.div`
-position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -18,6 +18,7 @@ position: fixed;
   padding: 60px;
   display: flex;
   align-items: center;
+  justify-content: center;
   @media (max-width: 767px) {
     padding: ${rem(24)} 0 ${rem(20)} 0;
   }
