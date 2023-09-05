@@ -26,7 +26,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.span`
   font-family: ${props => props.theme.theme.fontFamily};
   font-weight: ${props => props.theme.theme.fontWeights.BOLDER};
   font-size: ${props => props.theme.theme.fontSizes.H1};
@@ -37,7 +37,7 @@ export const Title = styled.h1`
   margin-bottom: 12px;
 `;
 
-export const SubTitle = styled.h1`
+export const SubTitle = styled.span`
   font-family: ${props => props.theme.theme.fontFamily};
   font-weight: ${props => props.theme.theme.fontWeights.MEDIUM};
   font-size: ${props => props.theme.theme.fontSizes.XL};

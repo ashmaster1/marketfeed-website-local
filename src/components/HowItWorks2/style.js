@@ -42,7 +42,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.span`
   font-family: ${(props) => props.theme.theme.fontFamily};
   font-weight: ${(props) => props.theme.theme.fontWeights.BOLDER};
   font-size: ${(props) => props.theme.theme.fontSizes.H1};

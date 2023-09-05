@@ -1,7 +1,8 @@
 import { MarqueeContainer, MarqueeChildren } from "./style";
 import { dataPush } from "@/utils/gtm";
+import formatWorkshopDate from "@/utils/fomatWorkshopDate";
 import Icons from '../Icons/index'
-const Child = () => {
+const Child = ({date}) => {
   return (
     <MarqueeChildren>
         <Icons name='marqueeStar' />
@@ -10,7 +11,7 @@ const Child = () => {
       </div>
       <Icons name='marqueeStar' />
       <div className="child">
-        <span>Next workshop starts Sunday, August 23, 2023</span>
+        <span>Next workshop starts {date}</span>
       </div>
       <Icons name='marqueeStar' />
       <div className="child" style={{color: '#FFC400'}}>
@@ -20,6 +21,7 @@ const Child = () => {
   );
 };
 const Marquee = (props) => {
+  let {formattedDate, startTime, endTime} = formatWorkshopDate(props.workshopEventMeta.eventDate);
   return (
     <MarqueeContainer id='mf_register_workshop_top'
     onClick={() => {
@@ -31,12 +33,12 @@ const Marquee = (props) => {
       });
     }}>
       <div className="marquee">
-        {<Child/>}
-        {<Child/>}
+        {<Child date={formattedDate}/>}
+        {<Child date={formattedDate}/>}
       </div>
       <div className="marquee">
-        {<Child/>}
-        {<Child/>}
+        {<Child date={formattedDate}/>}
+        {<Child date={formattedDate}/>}
       </div>
     </MarqueeContainer>
   );

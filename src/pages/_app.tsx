@@ -331,7 +331,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ></Script>
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
-        <Marquee setShowRegistration={() => setShowRegistration(true)}/>
+        <Marquee workshopEventMeta={workshopEventMeta} setShowRegistration={() => setShowRegistration(true)}/>
         <HeaderFullWidth
           type='HOME'
           deviceType={deviceType}

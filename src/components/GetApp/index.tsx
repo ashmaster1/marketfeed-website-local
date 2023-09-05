@@ -52,14 +52,6 @@ const GetApp = () => {
           <div className='desc'>Scan QR Code</div>
         </Right>
       </Card>
-      <Close onClick={() => props.openAppScanModal()}>
-          <Icons
-            name='close'
-            width={deviceType === 'mobile' ? '20' : '36'}
-            height={deviceType === 'mobile' ? '20' : '36'}
-            fill={deviceType === 'mobile' ? '#000' : 'white'}
-          />
-      </Close>
     </Container>
   );
 };

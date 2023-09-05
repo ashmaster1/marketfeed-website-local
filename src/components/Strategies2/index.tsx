@@ -47,7 +47,7 @@ const Strategies2 = ({
             <span className='returns'>
               <span style={{ marginRight: '10px' }}>
                 {communityPerformanceMetaList &&
-                  communityPerformanceMetaList[0].totalPnlPercentage}
+                  Math.ceil(communityPerformanceMetaList[0].totalPnlPercentage).toFixed(1)}
                 %
               </span>
               <Icons
@@ -103,7 +103,7 @@ const Strategies2 = ({
             <span className='returns'>
               <span style={{ marginRight: '10px' }}>
                 {communityPerformanceMetaList &&
-                  communityPerformanceMetaList[1].totalPnlPercentage}
+                  Math.ceil(communityPerformanceMetaList[1].totalPnlPercentage).toFixed(1)}
                 %
               </span>
               <Icons

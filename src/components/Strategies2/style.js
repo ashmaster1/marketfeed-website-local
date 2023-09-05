@@ -40,7 +40,7 @@ export const SubContainer = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.span`
   color: #fff;
   text-align: center;
   font-feature-settings: "liga" off;
@@ -63,7 +63,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const SubTitle = styled.h1`
+export const SubTitle = styled.span`
   color: #B8B8B8;
   text-align: center;
   font-feature-settings: "liga" off;

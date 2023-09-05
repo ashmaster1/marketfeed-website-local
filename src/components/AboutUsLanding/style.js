@@ -41,9 +41,11 @@ export const LeftDescription = styled.div`
   text-align: left;
   width: 50%;
   .boldText {
-    font-family: ${props => props.theme.theme.fontFamily};
-    font-weight: ${props => props.theme.theme.fontWeights.BOLD};
-    font-size: ${props => props.theme.theme.fontSizes.H1};
+    h1{
+      font-family: ${props => props.theme.theme.fontFamily};
+      font-weight: ${props => props.theme.theme.fontWeights.BOLD};
+      font-size: ${props => props.theme.theme.fontSizes.H1};
+    }
     margin-bottom: 16px;
 
     @media (max-width: 768px) {

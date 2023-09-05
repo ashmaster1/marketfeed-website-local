@@ -84,13 +84,16 @@ export const LeftDescription = styled.div`
   }
 
   .boldText {
-    font-family: ${props => props.theme.theme.fontFamily};
-    font-weight: ${props => props.theme.theme.fontWeights.BOLDER};
-    font-size: ${props => props.theme.theme.fontSizes.VVXL};
-    margin-bottom: 16px;
-    color: #fff;
-    letter-spacing: -0.04em;
-    line-height: 86px;
+    h1{
+      font-family: ${props => props.theme.theme.fontFamily};
+      font-weight: ${props => props.theme.theme.fontWeights.BOLDER};
+      font-size: ${props => props.theme.theme.fontSizes.VVXL};
+      margin-bottom: 16px;
+      color: #fff;
+      letter-spacing: -0.04em;
+      line-height: 86px;
+    }
+    
     margin-top: 60px;
     @media (max-width: 1199px) {
         font-size: 48px;

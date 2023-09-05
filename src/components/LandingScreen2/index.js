@@ -51,7 +51,7 @@ const LandingScreen2 = ({
           <LeftDescription data-aos={isMobileOnly ? 'fade-up' :'fade-right'}>
             {/* <div className='topText'>TRADING MADE SIMPLE</div> */}
             <div className='boldText'  >
-              Exclusive <br></br>high return <br></br>investments
+              <h1>Exclusive <br></br>high return <br></br>investments</h1>
             </div>
             {/* <div className='tradeDescription'>
               Strategies that you can execute{' '}

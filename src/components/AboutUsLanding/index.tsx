@@ -17,7 +17,7 @@ const AboutUsLanding = props => {
     <Main>
       <Container>
         <LeftDescription>
-          <div className='boldText'>Who we are</div>
+          <div className='boldText'><h1>Who we are</h1></div>
           <div className='tradeDescription'>
             marketfeed started out in 2020 with a mission to democratise the
             stock market for all Indians. Our wild ambitions to ensure
