@@ -27,9 +27,10 @@ const HowItWorks2 = ({
       const line = document.getElementById('line');
       const container = document.getElementById('cont');
       const {y} = container?.getBoundingClientRect();
-      let offsetY = window.innerHeight-y-600;
-      var scrollSlow  = (offsetY / 5);
+      let offsetY = window.innerHeight-y-400;
+      var scrollSlow  = (offsetY / 3);
       let w = Math.min(Math.max(scrollSlow, 0), 70);
+
       if(w>1){
         if(!opacity1) setOpacity1(1);
       }

@@ -10,7 +10,7 @@ const Features = (props) => {
         Supercharge your {isMobileOnly && <br/>} portfolio {(!isMobileOnly) && <br/>}
         with {isMobileOnly && <br/>} Automated Trading.
       </Title>
-      <SubTitle data-aos="fade-up" data-aos-delay="500">Invest in high return, high risk trading portfolios</SubTitle>
+      <SubTitle data-aos="fade-up">Invest in high return, high risk trading portfolios</SubTitle>
       <FeaturesContainer>
         <div className="feature" data-aos="flip-down">
           <div className="feature-icon">

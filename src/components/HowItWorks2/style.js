@@ -74,8 +74,12 @@ export const WorkFlow = styled.div`
   gap: 160px 60px;
   margin-bottom: 100px;
   position: relative;
-  width: 968px;
+  max-width: 968px;
   margin: auto;
+  @media (max-width: 1400px) {
+    width: 100%;
+    gap: 20px;
+  }
   @media (max-width: 1199px) {
     width: 100%;
     gap: 20px;
@@ -96,6 +100,9 @@ export const WorkFlow = styled.div`
     height: 2px;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='6' stroke-linecap='butt'/%3e%3c/svg%3e");
     width: 65%;
+    @media (max-width: 1400px) {
+      left: 110px;
+    }
     @media (max-width: 1199px) {
       top: 45px;
       left: 120px;
@@ -113,6 +120,9 @@ export const WorkFlow = styled.div`
     height: 2px;
     background-color: #333333;
     width: 0;
+    @media (max-width: 1400px) {
+      left: 110px;
+    }
     @media (max-width: 1199px) {
       top: 45px;
       left: 120px;

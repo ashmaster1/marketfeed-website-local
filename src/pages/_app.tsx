@@ -216,11 +216,13 @@ export default function App({ Component, pageProps }: AppProps) {
     AOS.init({
       duration: 600,
       easing: 'ease-in-cubic',
-      delay: 500,
+      delay: 0,
       offset: 0,
+      throttleDelay: 99
     });
     AOS.refresh();
   }, []);
+  
 
   const submitRegistrationForm = ({ name, email, phone, snackBarRequired }) => {
     const utmParams = getUtmParams();
