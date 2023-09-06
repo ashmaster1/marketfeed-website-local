@@ -46,7 +46,7 @@ const Testimonials = ({ deviceType }: { deviceType: String }) => {
               <Icons name='user1' alt={'quotes'} />
               <div className='userDetails'>
                 <span className='designation'>User Since</span>
-                <span className='name'>Feb 2023</span>
+                <span className='name'>May 2023</span>
               </div>
             </div>
           </Item>
@@ -70,7 +70,7 @@ const Testimonials = ({ deviceType }: { deviceType: String }) => {
               <Icons name='user2' alt={'quotes'} />
               <div className='userDetails'>
                 <span className='designation'>User Since</span>
-                <span className='name'>Feb 2023</span>
+                <span className='name'>May 2023</span>
               </div>
             </div>
           </Item>
@@ -96,7 +96,7 @@ const Testimonials = ({ deviceType }: { deviceType: String }) => {
               <Icons name='user3' alt={'quotes'} />
               <div className='userDetails'>
                 <span className='designation'>User Since</span>
-                <span className='name'>Jan 2023</span>
+                <span className='name'>June 2023</span>
               </div>
             </div>
           </Item>
