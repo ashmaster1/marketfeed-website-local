@@ -19,7 +19,7 @@ const Features = (props) => {
           <div className="right">
             <span className="feature-title">Curated Trading Strategies</span>
             <span className="feature-subtitle">
-              Strategies designed to maximise returns while keeping risks in
+              Strategies designed to maximise returns while {isMobileOnly && <br/>} keeping risks in
               check
             </span>
           </div>
@@ -31,7 +31,7 @@ const Features = (props) => {
           <div className="right">
             <span className="feature-title">Start with just ₹2.4 Lakhs</span>
             <span className="feature-subtitle">
-              Dive in with an initial investment of just ₹2.4 lakhs, with no
+              Dive in with an initial investment of just ₹2.4 lakhs,{isMobileOnly && <br/>} with no
               upper limit
             </span>
           </div>
@@ -45,7 +45,7 @@ const Features = (props) => {
               Trades automated in own account
             </span>
             <span className="feature-subtitle">
-              Effortless automation, with funds always in your own broker’s
+              Effortless automation, with funds always in your {isMobileOnly && <br/>} own broker’s
               account
             </span>
           </div>

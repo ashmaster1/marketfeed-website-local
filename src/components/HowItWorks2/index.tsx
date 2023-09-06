@@ -17,6 +17,11 @@ const HowItWorks2 = ({
   const [opacity2, setOpacity2] = useState(0);
   const [opacity3, setOpacity3] = useState(0);
   useEffect(() => {
+    if(isMobileOnly){
+      setOpacity1(1);
+      setOpacity2(1);
+      setOpacity3(1);
+    }
     window.addEventListener('scroll', (e) => lineIncrease(e));
 
     return () => window.addEventListener('scroll', (e) => lineIncrease(e));

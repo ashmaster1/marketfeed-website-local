@@ -8,6 +8,8 @@ export const Container = styled.div`
   padding: ${rem(120)} ${rem(150)};
   align-items: center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
   @media (max-width: 1024px) and (min-width: 768px) {
     padding: ${rem(20)} ${rem(100)};
   }

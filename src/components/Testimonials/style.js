@@ -31,7 +31,7 @@ export const Container = styled.div`
     background: transparent;
   }
   @media (max-width: 767px) {
-    padding: 30px ${rem(0)};
+    padding: 0 ${rem(0)};
     background: transparent;
   }
 `;
@@ -113,7 +113,7 @@ export const Item = styled.div`
     border-radius: 20px;
     padding: 20px 16px;
     min-width: ${rem(240)};
-    height: 383px;
+    height: 300px;
     justify-content: space-between;
   }
   &:before {

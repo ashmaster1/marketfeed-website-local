@@ -1,9 +1,10 @@
 import React from 'react';
+import { isMobileOnly } from 'react-device-detect';
 
 export const date = props => {
   return (
     <svg
-      width={props.width || '28'}
+      width={isMobileOnly ? '18px' : '28px'}
       height={props.height || '27'}
       viewBox='0 0 28 27'
       fill='none'

@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   @media (max-width: 767px) {
     min-height: auto;
     height: auto;
-    padding: 160px 0 0;
+    padding: 140px 0 0;
   }
 `;
 export const Container = styled.div`
@@ -99,6 +99,12 @@ export const LeftDescription = styled.div`
       }
       @media (max-width: 767px) {
         text-align: center;
+        font-size: 44px;
+        line-height: 38px; /* 95% */
+        letter-spacing: -0.8px;
+      }
+      @media (max-width: 360px) {
+        text-align: center;
         font-size: 40px;
         line-height: 38px; /* 95% */
         letter-spacing: -0.8px;
@@ -123,6 +129,10 @@ export const LeftDescription = styled.div`
       letter-spacing: -0.013px;
     }
     @media (max-width: 767px) {
+      text-align: center;
+      font-size: 14px;
+    }
+    @media (max-width: 360px) {
       text-align: center;
       font-size: ${(props) => props.theme.theme.fontSizes.XS};
     }

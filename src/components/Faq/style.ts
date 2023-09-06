@@ -21,6 +21,7 @@ export const Container = styled.div`
   @media (max-width: 767px) {
     padding: 40px 24px;
     background: transparent;
+    text-align: center;
   }
 `;
 
@@ -58,6 +59,7 @@ export const FaqContainer = styled.div`
   }
   @media (max-width: 767px) {
     width: 100%;
+    text-align: left;
   }
 `;
 
@@ -185,6 +187,7 @@ export const Wrapper = styled.div`
   }
   @media (max-width: 767px) {
     flex-direction: column;
+    gap: 20px;
   }
 `;
 

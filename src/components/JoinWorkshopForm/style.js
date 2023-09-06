@@ -178,6 +178,11 @@ export const Wrapper = styled.div`
     margin-bottom: 12px;
     align-items: center;
     gap: 12px;
+    .iconContainer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     span {
       color: #fff;
       font-family: ${props => props.theme.theme.fontFamily};

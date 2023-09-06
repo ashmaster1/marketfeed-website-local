@@ -284,15 +284,14 @@ const JoinWorkshopForm = ({
       </Aum>
       <Wrapper>
         <div className='child'>
-          <div>
-          <Icons name='tick' />
+          <div className='iconContainer'>
+            <Icons name='tick2' />
           </div>
-          
           <span>Potentially better returns than mutual funds and stocks</span>
         </div>
         <div className='child'>
-        <div>
-          <Icons name='tick' />
+        <div className='iconContainer'>
+          <Icons name='tick2' />
           </div>
           <span>Start with just ₹2.4 Lakhs, no upper limit</span>
         </div>

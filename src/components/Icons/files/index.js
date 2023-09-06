@@ -46,6 +46,7 @@ import {chart} from './chart';
 import {playstore} from './playstore'
 import {appstore} from './appstore'
 import {marqueeStar} from './marqueeStar'
+import {tick2} from './tick2'
 
 export default {
   marketfeedUniversityLogo,
@@ -95,5 +96,6 @@ export default {
   step23,
   playstore,
   appstore,
-  marqueeStar
+  marqueeStar,
+  tick2
 };

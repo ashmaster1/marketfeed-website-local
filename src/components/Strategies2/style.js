@@ -162,7 +162,7 @@ export const Details = styled.div`
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: ${(props) => (props.type === "title" ? "36px" : "24px")};
+  margin-bottom: ${(props) => (props.type === "title" ? "36px" : "0")};
   .title {
     font-family: ${(props) => props.theme.theme.fontFamily};
     font-weight: ${(props) => props.theme.theme.fontWeights.BOLDER};
