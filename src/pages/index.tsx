@@ -110,7 +110,7 @@ export default function Home({
       {isLoading ? <Loader /> : null}
       <Head>
         <title>Earn Extra Income with Stock Market Investments | marketfeed</title>
-        <meta name='description' content='Looking for ways to earn extra income? Marketfeed.com offers a comprehensive platform to invest in stocks and unlock new earning possibilities. Get started today!' />
+        <meta name='description' content='Looking for ways to earn extra income? marketfeed.com offers a comprehensive platform to invest in stocks and unlock new earning possibilities. Get started today!' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
