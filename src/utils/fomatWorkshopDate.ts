@@ -1,4 +1,4 @@
-export default function formatWorkshopDate(workshopDate: any){
+export default function formatWorkshopDate(workshopDate: any, dayNeeded=true){
     let date = new Date(workshopDate);
 
   // Define an array of weekday names
@@ -62,7 +62,9 @@ export default function formatWorkshopDate(workshopDate: any){
   let endTime = formatAMPM(endDate);
 
   // Format the date
-  let formattedDate =
+  let formattedDate
+  if(dayNeeded){
+    formattedDate =
     weekdays[date.getUTCDay()] +
     ', ' +
     months[date.getUTCMonth()] +
@@ -70,6 +72,16 @@ export default function formatWorkshopDate(workshopDate: any){
     getNth(date.getUTCDate()) +
     ', ' +
     date.getUTCFullYear();
+  }
+  else{
+    formattedDate =
+    months[date.getUTCMonth()] +
+    ' ' +
+    getNth(date.getUTCDate()) +
+    ', ' +
+    date.getUTCFullYear();
+  }
+  
 
 
   return {formattedDate, startTime, endTime}

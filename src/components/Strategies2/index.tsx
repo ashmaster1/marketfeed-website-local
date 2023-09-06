@@ -13,6 +13,7 @@ import {
   Warning,
 } from './style';
 import { isMobile, isMobileOnly } from 'react-device-detect';
+import formatWorkshopDate from '@/utils/fomatWorkshopDate';
 
 const Strategies2 = ({
   deviceType,
@@ -63,7 +64,7 @@ const Strategies2 = ({
                 alt={'trendup'}
               />
             </span>
-            <span className='description'>* Return till now</span>
+            <span className='description'>* Returns since April 28th, 2023</span>
           </Details>
           {/* <Details>
             <span className='returns'>
@@ -119,7 +120,7 @@ const Strategies2 = ({
                 alt={'trendup'}
               />
             </span>
-            <span className='description'>* Return till now</span>
+            <span className='description'>* Returns since April 28th, 2023</span>
           </Details>
           {/* <Details>
             <span className='returns'>
